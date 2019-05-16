@@ -1,3 +1,6 @@
 (sym_lib_table
   (lib (name 2019-05-16_02-13-34)(type Legacy)(uri ${KIPRJMOD}/2019-05-16_02-13-34/2019-05-16_02-13-34.lib)(options "")(descr ""))
+  (lib (name m68k-rescue)(type Legacy)(uri ${KIPRJMOD}/m68k-rescue.lib)(options "")(descr ""))
+  (lib (name 2019-05-16_14-56-31)(type Legacy)(uri /Users/90303116/Downloads/ul_AS4C8M16SA7TCN/KiCAD/2019-05-16_14-56-31/2019-05-16_14-56-31.lib)(options "")(descr ""))
+  (lib (name 2019-05-16_14-45-37)(type Legacy)(uri /Users/90303116/Downloads/ul_W9825G2JB6/KiCAD/2019-05-16_14-45-37/2019-05-16_14-45-37.lib)(options "")(descr ""))
 )
