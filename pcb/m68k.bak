@@ -940,17 +940,6 @@ F 3 "http://www.issi.com/WW/pdf/61-64C5128AL.pdf" H 16250 14800 50  0001 C CNN
 	1    16250 14800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Memory_RAM:AS6C1616 U?
-U 1 1 5D00EA19
-P 8100 2200
-F 0 "U?" H 8100 3781 50  0000 C CNN
-F 1 "AS6C1616" H 8100 3690 50  0000 C CNN
-F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 9150 850 50  0001 C CNN
-F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1616-TSOPI.pdf" H 7800 2650 50  0001 C CNN
-	1    8100 2200
-	1    0    0    -1  
-$EndComp
 Text Notes 7750 900  0    50   ~ 0
 SRAM
 Text Notes 15800 13550 0    50   ~ 0
@@ -962,6 +951,331 @@ Wire Bus Line
 Connection ~ 8900 4200
 Wire Bus Line
 	8900 4200 10550 4200
+Entry Wire Line
+	8700 1100 8800 1200
+Entry Wire Line
+	8700 1200 8800 1300
+Entry Wire Line
+	8700 1300 8800 1400
+Entry Wire Line
+	8700 1400 8800 1500
+Entry Wire Line
+	8700 1500 8800 1600
+Entry Wire Line
+	8700 1600 8800 1700
+Entry Wire Line
+	8700 1700 8800 1800
+Entry Wire Line
+	8700 1800 8800 1900
+Entry Wire Line
+	8700 1900 8800 2000
+Entry Wire Line
+	8700 2000 8800 2100
+Entry Wire Line
+	8700 2100 8800 2200
+Entry Wire Line
+	8700 2200 8800 2300
+Entry Wire Line
+	8700 2300 8800 2400
+Entry Wire Line
+	8700 2400 8800 2500
+Entry Wire Line
+	8700 2500 8800 2600
+Entry Wire Line
+	8700 2600 8800 2700
+Entry Wire Line
+	8700 2700 8800 2800
+Entry Wire Line
+	8700 2800 8800 2900
+Entry Wire Line
+	8700 2900 8800 3000
+Entry Wire Line
+	8700 3000 8800 3100
+Wire Wire Line
+	8800 1200 8900 1200
+Wire Wire Line
+	8800 1300 8900 1300
+Wire Wire Line
+	8800 1400 8900 1400
+Wire Wire Line
+	8800 1500 8900 1500
+Wire Wire Line
+	8800 1600 8900 1600
+Wire Wire Line
+	8800 1700 8900 1700
+Wire Wire Line
+	8800 1800 8900 1800
+Wire Wire Line
+	8800 1900 8900 1900
+Wire Wire Line
+	8800 2000 8900 2000
+Wire Wire Line
+	8800 2100 8900 2100
+Wire Wire Line
+	8800 2200 8900 2200
+Wire Wire Line
+	8800 2300 8900 2300
+Wire Wire Line
+	8800 2400 8900 2400
+Wire Wire Line
+	8800 2500 8900 2500
+Wire Wire Line
+	8800 2600 8900 2600
+Wire Wire Line
+	8800 2700 8900 2700
+Wire Wire Line
+	8800 2800 8900 2800
+Wire Wire Line
+	8800 2900 8900 2900
+Wire Wire Line
+	8800 3000 8900 3000
+Wire Wire Line
+	8800 3100 8900 3100
+Wire Bus Line
+	7200 5100 7900 5100
+Entry Wire Line
+	7500 1100 7600 1000
+Entry Wire Line
+	7200 1200 7300 1100
+Entry Wire Line
+	7200 1300 7300 1200
+Entry Wire Line
+	7200 1400 7300 1300
+Entry Wire Line
+	7200 1500 7300 1400
+Entry Wire Line
+	7200 1600 7300 1500
+Entry Wire Line
+	7200 1700 7300 1600
+Entry Wire Line
+	7200 1800 7300 1700
+Entry Wire Line
+	7200 1900 7300 1800
+Entry Wire Line
+	7200 2000 7300 1900
+Entry Wire Line
+	7200 2100 7300 2000
+Entry Wire Line
+	7200 2200 7300 2100
+Entry Wire Line
+	7200 2300 7300 2200
+Entry Wire Line
+	7200 2400 7300 2300
+Entry Wire Line
+	7200 2500 7300 2400
+Entry Wire Line
+	7200 2600 7300 2500
+Entry Wire Line
+	7200 2700 7300 2600
+Entry Wire Line
+	10400 4650 10500 4550
+Entry Wire Line
+	10400 4750 10500 4650
+Entry Wire Line
+	10400 4850 10500 4750
+Entry Wire Line
+	10400 4950 10500 4850
+Entry Wire Line
+	10400 5050 10500 4950
+Entry Wire Line
+	10400 5150 10500 5050
+Entry Wire Line
+	10400 5250 10500 5150
+Entry Wire Line
+	10400 5350 10500 5250
+Entry Wire Line
+	10400 5450 10500 5350
+Entry Wire Line
+	10400 5550 10500 5450
+Entry Wire Line
+	10400 5650 10500 5550
+Entry Wire Line
+	10400 5750 10500 5650
+Entry Wire Line
+	10400 5850 10500 5750
+Entry Wire Line
+	10400 5950 10500 5850
+Entry Wire Line
+	10400 6050 10500 5950
+Entry Wire Line
+	10400 6150 10500 6050
+Entry Wire Line
+	10400 6250 10500 6150
+Entry Wire Line
+	10400 6350 10500 6250
+Entry Wire Line
+	10400 6450 10500 6350
+Wire Wire Line
+	7300 1100 7500 1100
+Wire Wire Line
+	7300 1200 7500 1200
+Wire Wire Line
+	7300 1300 7500 1300
+Wire Wire Line
+	7300 1400 7500 1400
+Wire Wire Line
+	7300 1500 7500 1500
+Wire Wire Line
+	7300 1600 7500 1600
+Wire Wire Line
+	7300 1700 7500 1700
+Wire Wire Line
+	7300 1800 7500 1800
+Wire Wire Line
+	7300 1900 7500 1900
+Wire Wire Line
+	7300 2000 7500 2000
+Wire Wire Line
+	7300 2100 7500 2100
+Wire Wire Line
+	7300 2200 7500 2200
+Wire Wire Line
+	7300 2300 7500 2300
+Wire Wire Line
+	7300 2400 7500 2400
+Wire Wire Line
+	7300 2500 7500 2500
+Wire Wire Line
+	7300 2600 7500 2600
+Wire Wire Line
+	10500 4550 10700 4550
+Wire Wire Line
+	10500 4650 10700 4650
+Wire Wire Line
+	10500 4750 10700 4750
+Wire Wire Line
+	10500 4850 10700 4850
+Wire Wire Line
+	10500 4950 10700 4950
+Wire Wire Line
+	10500 5050 10700 5050
+Wire Wire Line
+	10500 5150 10700 5150
+Wire Wire Line
+	10500 5250 10700 5250
+Wire Wire Line
+	10500 5350 10700 5350
+Wire Wire Line
+	10500 5450 10700 5450
+Wire Wire Line
+	10500 5550 10700 5550
+Wire Wire Line
+	10500 5650 10700 5650
+Wire Wire Line
+	10500 5750 10700 5750
+Wire Wire Line
+	10500 5850 10700 5850
+Wire Wire Line
+	10500 5950 10700 5950
+Wire Wire Line
+	10500 6050 10700 6050
+Wire Wire Line
+	10500 6150 10700 6150
+Wire Wire Line
+	10500 6250 10700 6250
+Wire Wire Line
+	10500 6350 10700 6350
+Entry Wire Line
+	7800 6200 7900 6100
+Entry Wire Line
+	7800 6300 7900 6200
+Entry Wire Line
+	7800 6400 7900 6300
+Entry Wire Line
+	7800 6500 7900 6400
+Entry Wire Line
+	7800 6600 7900 6500
+Entry Wire Line
+	7800 6700 7900 6600
+Entry Wire Line
+	7800 6800 7900 6700
+Entry Wire Line
+	7800 6900 7900 6800
+Entry Wire Line
+	7800 7000 7900 6900
+Entry Wire Line
+	7800 7100 7900 7000
+Entry Wire Line
+	7800 7200 7900 7100
+Entry Wire Line
+	7800 7300 7900 7200
+Entry Wire Line
+	7800 8000 7900 7900
+Entry Wire Line
+	7800 8100 7900 8000
+Entry Wire Line
+	7800 8200 7900 8100
+Entry Wire Line
+	7800 8300 7900 8200
+Entry Wire Line
+	7800 8400 7900 8300
+Entry Wire Line
+	7800 8500 7900 8400
+Entry Wire Line
+	7800 8600 7900 8500
+Entry Wire Line
+	7800 8700 7900 8600
+Entry Wire Line
+	7800 8800 7900 8700
+Entry Wire Line
+	7800 8900 7900 8800
+Entry Wire Line
+	7800 9000 7900 8900
+Entry Wire Line
+	7800 9100 7900 9000
+Wire Bus Line
+	7900 9200 10400 9200
+Entry Wire Line
+	7400 2900 7500 2800
+Entry Wire Line
+	7400 3000 7500 2900
+Entry Wire Line
+	7400 3100 7500 3000
+Entry Wire Line
+	7400 3200 7500 3100
+Entry Wire Line
+	7400 3300 7500 3200
+Entry Wire Line
+	7400 3400 7500 3300
+$Comp
+L Memory_RAM:AS6C1616 U?
+U 1 1 5D00EA19
+P 8100 2200
+F 0 "U?" H 8100 3781 50  0000 C CNN
+F 1 "AS6C1616" H 8100 3690 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 9150 850 50  0001 C CNN
+F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1616-TSOPI.pdf" H 7800 2650 50  0001 C CNN
+	1    8100 2200
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	10600 6550 10700 6450
+Entry Wire Line
+	10600 6650 10700 6550
+Entry Wire Line
+	10600 6750 10700 6650
+Entry Wire Line
+	10600 6850 10700 6750
+Entry Wire Line
+	10600 6950 10700 6850
+Entry Wire Line
+	10600 7050 10700 6950
+Entry Wire Line
+	10600 7150 10700 7050
+Wire Bus Line
+	7400 4700 9850 4700
+Wire Bus Line
+	9850 4700 9850 6550
+Wire Bus Line
+	9850 6550 10600 6550
+Wire Bus Line
+	7400 2900 7400 4700
+Wire Bus Line
+	10600 6550 10600 7150
+Wire Bus Line
+	10400 4500 10400 9200
+Wire Bus Line
+	7200 1200 7200 5100
 Wire Bus Line
 	5050 5150 5050 8800
 Wire Bus Line
@@ -974,4 +1288,8 @@ Wire Bus Line
 	10550 1300 10550 4200
 Wire Bus Line
 	6400 1050 6400 5450
+Wire Bus Line
+	7900 5100 7900 9200
+Text Label 10350 4450 0    50   ~ 0
+Unnecessary?
 $EndSCHEMATC
