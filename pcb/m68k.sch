@@ -1802,8 +1802,6 @@ $EndComp
 Wire Wire Line
 	2550 13300 2450 13300
 Wire Wire Line
-	2450 13300 2450 12150
-Wire Wire Line
 	2950 11800 2450 11800
 Connection ~ 2450 11800
 Wire Wire Line
@@ -1876,11 +1874,6 @@ Wire Wire Line
 Connection ~ 2200 12000
 Wire Wire Line
 	2200 12000 2950 12000
-Wire Wire Line
-	1600 12150 2450 12150
-Connection ~ 2450 12150
-Wire Wire Line
-	2450 12150 2450 11800
 Wire Wire Line
 	1600 12350 2600 12350
 Wire Wire Line
@@ -4489,7 +4482,22 @@ $EndComp
 Wire Wire Line
 	8050 7700 8050 8000
 Wire Wire Line
-	13800 2500 13850 2550
+	2450 11800 2450 13300
+$Comp
+L power:+5V #PWR?
+U 1 1 733D3E79
+P 1650 11300
+F 0 "#PWR?" H 1650 11150 50  0001 C CNN
+F 1 "+5V" H 1665 11473 50  0000 C CNN
+F 2 "" H 1650 11300 50  0001 C CNN
+F 3 "" H 1650 11300 50  0001 C CNN
+	1    1650 11300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 11300 1650 12150
+Wire Wire Line
+	1650 12150 1600 12150
 Wire Bus Line
 	8350 3600 8350 4350
 Wire Bus Line
@@ -4524,6 +4532,4 @@ Wire Bus Line
 	5150 1400 5150 5550
 Wire Bus Line
 	5800 1300 5800 4350
-Connection ~ 13800 2500
-Connection ~ 13850 2550
 $EndSCHEMATC
