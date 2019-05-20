@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:m68k-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
@@ -342,17 +342,6 @@ F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1616-TSOPI.pdf" H
 	-1   0    0    -1  
 $EndComp
 $Comp
-L m68k-rescue:SD_Card-Connector-m68k-rescue J3
-U 1 1 5CE51C9E
-P 10400 9450
-F 0 "J3" H 10400 10115 50  0000 C CNN
-F 1 "SD_Card" H 10400 10024 50  0000 C CNN
-F 2 "Connector_Card:SD_TE_2041021" H 10400 9450 50  0001 C CNN
-F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 10400 9450 50  0001 C CNN
-	1    10400 9450
-	-1   0    0    -1  
-$EndComp
-$Comp
 L m68k-rescue:DB15_Male_HighDensity-Connector-m68k-rescue J4
 U 1 1 5CE6E35F
 P 13200 3500
@@ -377,12 +366,12 @@ $EndComp
 $Comp
 L m68k-rescue:GND-power-m68k-rescue #PWR0108
 U 1 1 5D906744
-P 11400 9950
-F 0 "#PWR0108" H 11400 9700 50  0001 C CNN
-F 1 "GND" H 11405 9777 50  0000 C CNN
-F 2 "" H 11400 9950 50  0001 C CNN
-F 3 "" H 11400 9950 50  0001 C CNN
-	1    11400 9950
+P 11400 9850
+F 0 "#PWR0108" H 11400 9600 50  0001 C CNN
+F 1 "GND" H 11405 9677 50  0000 C CNN
+F 2 "" H 11400 9850 50  0001 C CNN
+F 3 "" H 11400 9850 50  0001 C CNN
+	1    11400 9850
 	1    0    0    -1  
 $EndComp
 Text Label 7300 2800 2    50   ~ 0
@@ -2762,48 +2751,32 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0146
 U 1 1 6C7561F8
-P 9400 9750
-F 0 "#PWR0146" H 9400 9500 50  0001 C CNN
-F 1 "GND" H 9405 9577 50  0000 C CNN
-F 2 "" H 9400 9750 50  0001 C CNN
-F 3 "" H 9400 9750 50  0001 C CNN
-	1    9400 9750
+P 9500 10050
+F 0 "#PWR0146" H 9500 9800 50  0001 C CNN
+F 1 "GND" H 9505 9877 50  0000 C CNN
+F 2 "" H 9500 10050 50  0001 C CNN
+F 3 "" H 9500 10050 50  0001 C CNN
+	1    9500 10050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9400 9750 9400 9650
+	9500 10050 9500 9950
 Wire Wire Line
-	9400 9650 9500 9650
+	9500 9950 9600 9950
 Wire Wire Line
-	9500 9550 9400 9550
+	11300 9550 11400 9550
 Wire Wire Line
-	9400 9550 9400 9650
-Connection ~ 9400 9650
-NoConn ~ 9500 9250
-NoConn ~ 9500 9350
+	11400 9550 11400 9850
 Wire Wire Line
-	11300 9650 11400 9650
+	11300 9350 11500 9350
 Wire Wire Line
-	11400 9650 11400 9950
+	11500 9350 11500 8950
 Wire Wire Line
-	11300 9350 11400 9350
-Wire Wire Line
-	11400 9350 11400 9650
-Connection ~ 11400 9650
-Wire Wire Line
-	11300 9450 11500 9450
-Wire Wire Line
-	11500 9450 11500 8950
-Wire Wire Line
-	11300 9550 11600 9550
-NoConn ~ 11300 9850
+	11300 9450 11600 9450
+NoConn ~ 11300 9750
 NoConn ~ 11300 9050
 Wire Wire Line
-	11600 9550 11600 9350
-Wire Wire Line
-	11700 9750 11700 9450
-Wire Wire Line
-	11300 9750 11700 9750
+	11300 9650 11700 9650
 $Comp
 L power:+5V #PWR0147
 U 1 1 6D45D3BD
@@ -5849,6 +5822,21 @@ Text GLabel 8450 3200 0    50   Output ~ 0
 BERRn
 Wire Wire Line
 	8450 3200 8550 3200
+$Comp
+L Connector:Micro_SD_Card J8
+U 1 1 5CFC1198
+P 10400 9350
+F 0 "J8" H 10350 10067 50  0000 C CNN
+F 1 "Micro_SD_Card" H 10350 9976 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 11550 9650 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10400 9350 50  0001 C CNN
+	1    10400 9350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	11600 9450 11600 9350
+Wire Wire Line
+	11700 9650 11700 9450
 Wire Bus Line
 	8350 3600 8350 4350
 Wire Bus Line
