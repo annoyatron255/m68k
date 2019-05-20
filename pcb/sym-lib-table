@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name 2019-05-16_02-13-34)(type Legacy)(uri ${KIPRJMOD}/2019-05-16_02-13-34/2019-05-16_02-13-34.lib)(options "")(descr ""))
   (lib (name m68k-rescue)(type Legacy)(uri ${KIPRJMOD}/m68k-rescue.lib)(options "")(descr ""))
+  (lib (name 2019-05-20_01-28-47)(type Legacy)(uri ${KIPRJMOD}/KiCAD/2019-05-20_01-28-47/2019-05-20_01-28-47.lib)(options "")(descr ""))
 )

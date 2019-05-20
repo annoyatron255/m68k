@@ -45,6 +45,33 @@ X A7 9 0 -800 300 R 59 59 1 0 B
 ENDDRAW
 ENDDEF
 #
+# 2019-05-20_01-28-47_ATL431BQDBZR
+#
+DEF 2019-05-20_01-28-47_ATL431BQDBZR U 0 10 Y Y 1 F N
+F0 "U" 0 100 60 H V C CNN
+F1 "2019-05-20_01-28-47_ATL431BQDBZR" 0 0 60 H V C CNN
+F2 "DBZ0003A_N" 0 -60 60 H I C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ DBZ0003A_N
+ DBZ0003A_N-M
+ DBZ0003A_N-L
+$ENDFPLIST
+DRAW
+P 2 1 0 8 -40 -100 0 -60 N
+P 2 1 0 8 0 -200 50 -200 N
+P 2 1 0 8 0 -60 0 60 N
+P 2 1 0 8 0 0 100 100 N
+P 2 1 0 8 0 60 40 100 N
+P 2 1 0 8 50 -200 50 -50 N
+P 2 1 0 8 100 -100 0 0 N
+P 2 1 0 8 100 100 100 -100 N
+X CATHODE 1 -200 0 200 R 59 59 1 0 U
+X REF 2 -200 -200 200 R 59 59 1 0 I
+X ANODE 3 300 0 200 L 59 59 1 0 U
+ENDDRAW
+ENDDEF
+#
 # 74xGxx_74LVC1G17
 #
 DEF 74xGxx_74LVC1G17 U 0 40 Y Y 1 F N
@@ -121,28 +148,6 @@ DRAW
 P 2 0 1 8 -50 50 -50 -50 N
 P 2 0 1 0 50 0 -50 0 N
 P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_D_Schottky
-#
-DEF Device_D_Schottky D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_Schottky" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- TO-???*
- *_Diode_*
- *SingleDiode*
- D_*
-$ENDFPLIST
-DRAW
-P 2 0 1 0 50 0 -50 0 N
-P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
-P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
 X K 1 -150 0 100 R 50 50 1 1 P
 X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
@@ -366,6 +371,47 @@ S -200 -200 200 75 0 1 10 f
 X GND 1 0 -300 100 U 50 50 1 1 W
 X VO 2 300 0 100 L 50 50 1 1 w
 X VI 3 -300 0 100 R 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# dk_Rectangular-Connectors-Headers-Male-Pins_FTSH-105-01-L-DV-K
+#
+DEF dk_Rectangular-Connectors-Headers-Male-Pins_FTSH-105-01-L-DV-K J 0 40 Y Y 1 F N
+F0 "J" -100 300 50 H V L CNN
+F1 "dk_Rectangular-Connectors-Headers-Male-Pins_FTSH-105-01-L-DV-K" 0 -300 50 H V C CNN
+F2 "digikey-footprints:PinHeader_2x5_P1.27_SMD" 200 200 60 H I L CNN
+F3 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" 200 300 60 H I L CNN
+F4 "SAM8799-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "FTSH-105-01-L-DV-K" 200 500 60 H I L CNN "MPN"
+F6 "Connectors, Interconnects" 200 600 60 H I L CNN "Category"
+F7 "Rectangular Connectors - Headers, Male Pins" 200 700 60 H I L CNN "Family"
+F8 "http://suddendocs.samtec.com/prints/ftsh-1xx-xx-xxx-dv-xxx-xxx-mkt.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/samtec-inc/FTSH-105-01-L-DV-K/SAM8799-ND/1875039" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "CONN HEADER SMD 10POS 1.27MM" 200 1000 60 H I L CNN "Description"
+F11 "Samtec Inc." 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -100 250 100 -250 1 1 0 f
+S -60 -190 -40 -210 1 1 0 F
+S -60 -90 -40 -110 1 1 0 F
+S -60 10 -40 -10 1 1 0 F
+S -60 110 -40 90 1 1 0 F
+S -60 210 -40 190 1 1 0 F
+S 40 -190 60 -210 1 1 0 F
+S 40 -90 60 -110 1 1 0 F
+S 40 10 60 -10 1 1 0 F
+S 40 110 60 90 1 1 0 F
+S 40 210 60 190 1 1 0 F
+X ~ 1 -200 200 100 R 50 50 1 1 P
+X ~ 10 200 -200 100 L 50 50 1 1 P
+X ~ 2 200 200 100 L 50 50 1 1 P
+X ~ 3 -200 100 100 R 50 50 1 1 P
+X ~ 4 200 100 100 L 50 50 1 1 P
+X ~ 5 -200 0 100 R 50 50 1 1 P
+X ~ 6 200 0 100 L 50 50 1 1 P
+X ~ 7 -200 -100 100 R 50 50 1 1 P
+X ~ 8 200 -100 100 L 50 50 1 1 P
+X ~ 9 -200 -200 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
