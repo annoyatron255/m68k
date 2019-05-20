@@ -2074,37 +2074,37 @@ Wire Wire Line
 	3750 10400 4200 10400
 Connection ~ 4200 10400
 Wire Wire Line
-	18800 1200 18700 1200
+	18800 2800 18700 2800
 Wire Wire Line
-	18800 1300 18700 1300
+	18800 2900 18700 2900
 Wire Wire Line
-	18800 1400 18700 1400
+	18800 3000 18700 3000
 Wire Wire Line
-	18800 1500 18700 1500
+	18800 3100 18700 3100
 Wire Wire Line
-	18800 1600 18700 1600
+	18800 3200 18700 3200
 Wire Wire Line
-	18800 1700 18700 1700
+	18800 3300 18700 3300
 Wire Wire Line
-	18800 1800 18700 1800
+	18800 3400 18700 3400
 Wire Wire Line
-	18800 1900 18700 1900
+	18800 3500 18700 3500
 Entry Wire Line
-	18700 1200 18600 1300
+	18700 2800 18600 2900
 Entry Wire Line
-	18700 1300 18600 1400
+	18700 2900 18600 3000
 Entry Wire Line
-	18700 1400 18600 1500
+	18700 3000 18600 3100
 Entry Wire Line
-	18700 1500 18600 1600
+	18700 3100 18600 3200
 Entry Wire Line
-	18700 1600 18600 1700
+	18700 3200 18600 3300
 Entry Wire Line
-	18700 1700 18600 1800
+	18700 3300 18600 3400
 Entry Wire Line
-	18700 1800 18600 1900
+	18700 3400 18600 3500
 Entry Wire Line
-	18700 1900 18600 2000
+	18700 3500 18600 3600
 Wire Wire Line
 	18800 2000 18700 2000
 Wire Wire Line
@@ -2135,36 +2135,6 @@ Entry Wire Line
 	18700 2500 18600 2600
 Entry Wire Line
 	18700 2600 18600 2700
-Entry Wire Line
-	18700 2700 18600 2800
-Wire Wire Line
-	18800 2900 18700 2900
-Wire Wire Line
-	18800 3000 18700 3000
-Wire Wire Line
-	18800 3100 18700 3100
-Wire Wire Line
-	18800 3200 18700 3200
-Wire Wire Line
-	18800 3300 18700 3300
-Wire Wire Line
-	18800 3400 18700 3400
-Wire Wire Line
-	18800 3500 18700 3500
-Entry Wire Line
-	18700 2900 18600 3000
-Entry Wire Line
-	18700 3000 18600 3100
-Entry Wire Line
-	18700 3100 18600 3200
-Entry Wire Line
-	18700 3200 18600 3300
-Entry Wire Line
-	18700 3300 18600 3400
-Entry Wire Line
-	18700 3400 18600 3500
-Entry Wire Line
-	18700 3500 18600 3600
 Wire Wire Line
 	15200 1800 15100 1800
 Wire Wire Line
@@ -2262,63 +2232,39 @@ Entry Wire Line
 Entry Wire Line
 	18100 4000 18200 4100
 Wire Bus Line
-	18600 1200 15000 1200
-Wire Bus Line
 	18600 2100 18200 2100
-Wire Wire Line
-	18800 2800 18700 2800
-Entry Wire Line
-	18700 2800 18600 2900
-Wire Bus Line
-	18600 2850 18200 2850
-Text Label 18700 1200 0    50   ~ 0
-r0
-Text Label 18700 1300 0    50   ~ 0
-r1
-Text Label 18700 1400 0    50   ~ 0
-r2
-Text Label 18700 1500 0    50   ~ 0
-r3
-Text Label 18700 1600 0    50   ~ 0
-r4
-Text Label 18700 1700 0    50   ~ 0
-r5
-Text Label 18700 1800 0    50   ~ 0
-r6
-Text Label 18700 1900 0    50   ~ 0
-r7
-Text Label 18700 2000 0    50   ~ 0
-g0
-Text Label 18700 2100 0    50   ~ 0
-g1
-Text Label 18700 2300 0    50   ~ 0
-g3
-Text Label 18700 2200 0    50   ~ 0
-g2
-Text Label 18700 2400 0    50   ~ 0
-g4
-Text Label 18700 2500 0    50   ~ 0
-g5
-Text Label 18700 2600 0    50   ~ 0
-g6
-Text Label 18700 2700 0    50   ~ 0
-g7
 Text Label 18700 2800 0    50   ~ 0
-b0
+r7
 Text Label 18700 2900 0    50   ~ 0
-b1
+r6
 Text Label 18700 3000 0    50   ~ 0
-b2
+r5
 Text Label 18700 3100 0    50   ~ 0
-b3
+r4
 Text Label 18700 3200 0    50   ~ 0
-b4
+r3
 Text Label 18700 3300 0    50   ~ 0
-b5
+r2
 Text Label 18700 3400 0    50   ~ 0
-b6
+r1
 Text Label 18700 3500 0    50   ~ 0
-b7
+r0
+Text Label 18700 2000 0    50   ~ 0
+g7
+Text Label 18700 2100 0    50   ~ 0
+g6
+Text Label 18700 2300 0    50   ~ 0
+g4
+Text Label 18700 2200 0    50   ~ 0
+g5
+Text Label 18700 2400 0    50   ~ 0
+g3
+Text Label 18700 2500 0    50   ~ 0
+g2
+Text Label 18700 2600 0    50   ~ 0
+g1
+Text Label 18700 2700 0    50   ~ 0
+g0
 Text Label 18000 3300 0    50   ~ 0
 b0
 Text Label 18000 3400 0    50   ~ 0
@@ -5837,6 +5783,68 @@ Wire Wire Line
 	11600 9450 11600 9350
 Wire Wire Line
 	11700 9650 11700 9450
+Text Label 18700 1900 0    50   ~ 0
+b0
+Text Label 18700 1800 0    50   ~ 0
+b1
+Text Label 18700 1700 0    50   ~ 0
+b2
+Text Label 18700 1600 0    50   ~ 0
+b3
+Text Label 18700 1500 0    50   ~ 0
+b4
+Text Label 18700 1400 0    50   ~ 0
+b5
+Text Label 18700 1300 0    50   ~ 0
+b6
+Text Label 18700 1200 0    50   ~ 0
+b7
+Entry Wire Line
+	18700 1200 18600 1300
+Wire Wire Line
+	18800 1200 18700 1200
+Entry Wire Line
+	18700 1900 18600 2000
+Entry Wire Line
+	18700 1800 18600 1900
+Entry Wire Line
+	18700 1700 18600 1800
+Entry Wire Line
+	18700 1600 18600 1700
+Entry Wire Line
+	18700 1500 18600 1600
+Entry Wire Line
+	18700 1400 18600 1500
+Entry Wire Line
+	18700 1300 18600 1400
+Wire Wire Line
+	18800 1900 18700 1900
+Wire Wire Line
+	18800 1800 18700 1800
+Wire Wire Line
+	18800 1700 18700 1700
+Wire Wire Line
+	18800 1600 18700 1600
+Wire Wire Line
+	18800 1500 18700 1500
+Wire Wire Line
+	18800 1400 18700 1400
+Wire Wire Line
+	18800 1300 18700 1300
+Entry Wire Line
+	18700 2700 18600 2800
+Wire Bus Line
+	18600 2850 18400 2850
+Wire Bus Line
+	18400 2850 18400 1200
+Wire Bus Line
+	18400 1200 15000 1200
+Wire Bus Line
+	18200 3050 18450 3050
+Wire Bus Line
+	18450 3050 18450 2000
+Wire Bus Line
+	18450 2000 18600 2000
 Wire Bus Line
 	8350 3600 8350 4350
 Wire Bus Line
@@ -5846,13 +5854,13 @@ Wire Bus Line
 Wire Bus Line
 	5300 4350 5300 5550
 Wire Bus Line
-	18200 2850 18200 4100
+	18600 2850 18600 3600
+Wire Bus Line
+	18600 1250 18600 2000
 Wire Bus Line
 	15000 1200 15000 2600
 Wire Bus Line
-	18600 2850 18600 3600
-Wire Bus Line
-	18600 1200 18600 2000
+	18200 3050 18200 4100
 Wire Bus Line
 	6100 4950 6100 9250
 Wire Bus Line
