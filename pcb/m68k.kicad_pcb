@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 4)
+    (drawings 8)
     (tracks 0)
     (zones 0)
     (modules 117)
@@ -6247,9 +6247,13 @@
     )
   )
 
+  (gr_line (start 220 120) (end 220 20) (layer Edge.Cuts) (width 0.05) (tstamp 5CE3866C))
+  (gr_line (start 120 120) (end 220 120) (layer Edge.Cuts) (width 0.05) (tstamp 5CE3866C))
+  (gr_line (start 120 20) (end 220 20) (layer Edge.Cuts) (width 0.05) (tstamp 5CE3866A))
+  (gr_line (start 99 20) (end 100 20) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 98 20) (end 99 20) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 20 120) (end 20 20) (layer Edge.Cuts) (width 0.05) (tstamp 5CE372FF))
   (gr_line (start 120 120) (end 20 120) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 120 20) (end 120 120) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 20 20) (end 120 20) (layer Edge.Cuts) (width 0.05) (tstamp 5CE372FC))
 
 )
