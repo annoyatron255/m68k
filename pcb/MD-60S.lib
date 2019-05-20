@@ -1,0 +1,34 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# MD-60S
+#
+DEF MD-60S J 0 40 Y Y 1 L N
+F0 "J" -200 426 50 H V L BNN
+F1 "MD-60S" -200 -601 50 H V L BNN
+F2 "CUI_MD-60S" 0 0 50 H I L BNN
+F3 "MD Series 6 Position 2 mm Pitch Right Angle PCB Mount Miniature DIN Connector" 0 0 50 H I L BNN
+F4 "CUI Inc." 0 0 50 H I L BNN
+F5 "https://www.digikey.com/product-detail/en/cui-inc/MD-60S/CP-2460-ND/145311?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
+F6 "MD-60S" 0 0 50 H I L BNN
+F7 "None" 0 0 50 H I L BNN
+F8 "CP-2460-ND" 0 0 50 H I L BNN
+F9 "https://www.cui.com/product/interconnect/din-connectors/mini-circular/non-shielded--right-angle-pcb/md-s-series?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -200 400 200 400 N
+P 2 0 0 10 200 400 200 -500 N
+P 2 0 0 10 200 -500 -200 -500 N
+P 2 0 0 10 -200 -500 -200 400 N
+X 1 1 -400 300 200 R 40 40 0 0 P 
+X 2 2 -400 200 200 R 40 40 0 0 P 
+X 3 3 -400 100 200 R 40 40 0 0 P 
+X SHIELD S -400 -400 200 R 40 40 0 0 P 
+X 4 4 -400 0 200 R 40 40 0 0 P 
+X 5 5 -400 -100 200 R 40 40 0 0 P 
+X 6 6 -400 -200 200 R 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library
