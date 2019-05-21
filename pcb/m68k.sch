@@ -2697,18 +2697,18 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0146
 U 1 1 6C7561F8
-P 9500 8950
-F 0 "#PWR0146" H 9500 8700 50  0001 C CNN
-F 1 "GND" H 9505 8777 50  0000 C CNN
-F 2 "" H 9500 8950 50  0001 C CNN
-F 3 "" H 9500 8950 50  0001 C CNN
-	1    9500 8950
+P 9500 10050
+F 0 "#PWR0146" H 9500 9800 50  0001 C CNN
+F 1 "GND" H 9505 9877 50  0000 C CNN
+F 2 "" H 9500 10050 50  0001 C CNN
+F 3 "" H 9500 10050 50  0001 C CNN
+	1    9500 10050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 8950 9500 8850
+	9500 10050 9500 9950
 Wire Wire Line
-	9500 8850 9600 8850
+	9500 9950 9600 9950
 Wire Wire Line
 	11300 9550 11400 9550
 Wire Wire Line
@@ -4449,17 +4449,21 @@ a10
 Text Label 5100 3050 0    50   ~ 0
 a9
 Text Label 5100 2100 0    50   ~ 0
-a1
-Text Label 5100 2000 0    50   ~ 0
-a2
-Text Label 5100 1700 0    50   ~ 0
-a5
-Text Label 5100 1600 0    50   ~ 0
-a6
-Text Label 5100 1500 0    50   ~ 0
-a7
-Text Label 5100 1400 0    50   ~ 0
 a8
+Text Label 5100 2000 0    50   ~ 0
+a7
+Text Label 5100 1900 0    50   ~ 0
+a6
+Text Label 5100 1800 0    50   ~ 0
+a5
+Text Label 5100 1700 0    50   ~ 0
+a4
+Text Label 5100 1600 0    50   ~ 0
+a3
+Text Label 5100 1500 0    50   ~ 0
+a2
+Text Label 5100 1400 0    50   ~ 0
+a1
 Wire Wire Line
 	5100 5450 5200 5450
 Wire Wire Line
@@ -4583,17 +4587,21 @@ A10
 Text Label 4200 3050 0    50   ~ 0
 A9
 Text Label 4200 2100 0    50   ~ 0
-A1
-Text Label 4200 2000 0    50   ~ 0
-A2
-Text Label 4200 1900 0    50   ~ 0
-A3
-Text Label 4200 1700 0    50   ~ 0
-A5
-Text Label 4200 1600 0    50   ~ 0
-A6
-Text Label 4200 1400 0    50   ~ 0
 A8
+Text Label 4200 2000 0    50   ~ 0
+A7
+Text Label 4200 1900 0    50   ~ 0
+A6
+Text Label 4200 1800 0    50   ~ 0
+A5
+Text Label 4200 1700 0    50   ~ 0
+A4
+Text Label 4200 1600 0    50   ~ 0
+A3
+Text Label 4200 1500 0    50   ~ 0
+A2
+Text Label 4200 1400 0    50   ~ 0
+A1
 Wire Wire Line
 	4200 5450 4300 5450
 Wire Wire Line
@@ -5763,13 +5771,13 @@ Wire Wire Line
 $Comp
 L Connector:Micro_SD_Card J8
 U 1 1 5CFC1198
-P 10400 9450
-F 0 "J8" H 10350 10167 50  0000 C CNN
-F 1 "Micro_SD_Card" H 10350 10076 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 11550 9750 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10400 9450 50  0001 C CNN
-	1    10400 9450
-	-1   0    0    1   
+P 10400 9350
+F 0 "J8" H 10350 10067 50  0000 C CNN
+F 1 "Micro_SD_Card" H 10350 9976 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 11550 9650 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10400 9350 50  0001 C CNN
+	1    10400 9350
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	11600 9450 11600 9350
@@ -5837,14 +5845,73 @@ Wire Bus Line
 	18450 3050 18450 2000
 Wire Bus Line
 	18450 2000 18600 2000
-Text Label 5100 1800 0    50   ~ 0
-a4
-Text Label 5100 1900 0    50   ~ 0
-a3
-Text Label 4200 1500 0    50   ~ 0
-A7
-Text Label 4200 1800 0    50   ~ 0
-A4
+$Comp
+L power:+1V8 #PWR04
+U 1 1 5F0CC1BB
+P 15400 13500
+F 0 "#PWR04" H 15400 13350 50  0001 C CNN
+F 1 "+1V8" H 15415 13673 50  0000 C CNN
+F 2 "" H 15400 13500 50  0001 C CNN
+F 3 "" H 15400 13500 50  0001 C CNN
+	1    15400 13500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C68
+U 1 1 5F0D1501
+P 15400 13650
+F 0 "C68" H 15515 13696 50  0000 L CNN
+F 1 "0.01uF" H 15515 13605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15438 13500 50  0001 C CNN
+F 3 "~" H 15400 13650 50  0001 C CNN
+	1    15400 13650
+	1    0    0    -1  
+$EndComp
+$Comp
+L m68k-rescue:GND-power-m68k-rescue #PWR05
+U 1 1 5F0D1E49
+P 15400 13800
+F 0 "#PWR05" H 15400 13550 50  0001 C CNN
+F 1 "GND" H 15405 13627 50  0000 C CNN
+F 2 "" H 15400 13800 50  0001 C CNN
+F 3 "" H 15400 13800 50  0001 C CNN
+	1    15400 13800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15800 13800 15400 13800
+Connection ~ 15400 13800
+$Comp
+L Device:C C69
+U 1 1 5F1D9232
+P 15800 13650
+F 0 "C69" H 15915 13696 50  0000 L CNN
+F 1 "0.01uF" H 15915 13605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15838 13500 50  0001 C CNN
+F 3 "~" H 15800 13650 50  0001 C CNN
+	1    15800 13650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15800 13500 16200 13500
+Wire Wire Line
+	16200 13800 15800 13800
+Connection ~ 15800 13800
+Wire Wire Line
+	15800 13500 15400 13500
+Connection ~ 15800 13500
+Connection ~ 15400 13500
+$Comp
+L Device:C C70
+U 1 1 5F9C5FCF
+P 16200 13650
+F 0 "C70" H 16315 13696 50  0000 L CNN
+F 1 "0.01uF" H 16315 13605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 16238 13500 50  0001 C CNN
+F 3 "~" H 16200 13650 50  0001 C CNN
+	1    16200 13650
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	8350 3600 8350 4350
 Wire Bus Line
