@@ -1,0 +1,44 @@
+/* Default linker script, for normal executables */
+/* Copyright (C) 2014-2017 Free Software Foundation, Inc.
+   Copying and distribution of this script, with or without modification,
+   are permitted in any medium without royalty provided the copyright
+   notice and this notice are preserved.  */
+OUTPUT_FORMAT(a.out-mintprg)
+SEARCH_DIR("=/usr/m68k-atari-mintelf/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
+SECTIONS
+{
+  /* The VMA of the .text section is 0xe4 instead of 0
+     because the extended MiNT header is just before,
+     at the beginning of the TEXT segment.  */
+  .text 0xe4: SUBALIGN(2)
+  {
+    CREATE_OBJECT_SYMBOLS
+    *(.text .text.* .gnu.linkonce.t.*)
+    *(.rodata .rodata.* .gnu.linkonce.r.*) /* Only present in ELF objects */
+    *(.eh_frame*)
+    *(.gcc_except_table*)
+     *(.ctors)
+     *(.dtors)
+    CONSTRUCTORS
+    etext = .;
+    _etext = .;
+  }
+  .data : SUBALIGN(2)
+  {
+    *(.data .data.* .gnu.linkonce.d.* .gnu.linkonce.s.* .gnu.linkonce.s2.*)
+    edata = .;
+    _edata = .;
+  }
+  .bss :
+  {
+    _bss_start = .;
+    *(.bss .bss.* .gnu.linkonce.b.* .gnu.linkonce.sb.* .gnu.linkonce.sb2.*)
+    *(COMMON)
+    end = .;
+    _end = .;
+  }
+  /* Unfortunately, stabs are not mappable from ELF to a.out.
+     It can probably be fixed with some amount of work.  */
+  /DISCARD/ :
+  { *(.stab) *(.stab*) *(.debug) *(.debug*) *(.comment) *(.gnu.warning.*) }
+}
