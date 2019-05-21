@@ -1,0 +1,30 @@
+/* Script for ld -r: link without relocation */
+/* Copyright (C) 2014-2017 Free Software Foundation, Inc.
+   Copying and distribution of this script, with or without modification,
+   are permitted in any medium without royalty provided the copyright
+   notice and this notice are preserved.  */
+OUTPUT_FORMAT(a.out-zero-big)
+SECTIONS
+{
+  .text : SUBALIGN(2)
+  {
+    CREATE_OBJECT_SYMBOLS
+    *(.text .text.* .gnu.linkonce.t.*)
+    *(.rodata .rodata.* .gnu.linkonce.r.*) /* Only present in ELF objects */
+    *(.eh_frame*)
+    *(.gcc_except_table*)
+  }
+  .data : SUBALIGN(2)
+  {
+    *(.data .data.* .gnu.linkonce.d.* .gnu.linkonce.s.* .gnu.linkonce.s2.*)
+  }
+  .bss :
+  {
+    *(.bss .bss.* .gnu.linkonce.b.* .gnu.linkonce.sb.* .gnu.linkonce.sb2.*)
+    *(COMMON)
+  }
+  /* Unfortunately, stabs are not mappable from ELF to a.out.
+     It can probably be fixed with some amount of work.  */
+  /DISCARD/ :
+  { *(.stab) *(.stab*) *(.debug) *(.debug*) *(.comment) *(.gnu.warning.*) }
+}
