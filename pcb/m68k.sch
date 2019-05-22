@@ -1398,7 +1398,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 6200 8100 3400
 Wire Wire Line
-	5350 11800 6150 11800
+	5350 11800 6300 11800
 Wire Wire Line
 	5350 12200 5450 12200
 Wire Wire Line
@@ -1416,8 +1416,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 11900 5650 11900
 Connection ~ 7050 11700
-Connection ~ 6150 11800
-Connection ~ 6050 12000
+Connection ~ 6300 11800
 Connection ~ 5950 11900
 Wire Wire Line
 	5950 11900 5750 11900
@@ -1457,7 +1456,7 @@ $EndComp
 Wire Wire Line
 	7050 11650 7050 11700
 Wire Wire Line
-	6150 11650 6150 11800
+	6150 11650 6300 11800
 Wire Wire Line
 	7050 11250 7050 11300
 Wire Wire Line
@@ -1470,7 +1469,7 @@ Wire Wire Line
 Connection ~ 6600 11300
 Wire Wire Line
 	6600 11300 7050 11300
-Text GLabel 5450 12400 2    50   Input ~ 0
+Text GLabel 5450 12500 2    50   Input ~ 0
 CDONE
 Wire Wire Line
 	5350 12400 5450 12400
@@ -1524,24 +1523,16 @@ $EndComp
 Wire Wire Line
 	13000 7750 13000 7800
 Wire Wire Line
-	7550 11600 7650 11600
-Wire Wire Line
-	7050 11700 7650 11700
-Wire Wire Line
-	6150 11800 7650 11800
-Wire Wire Line
-	7650 11900 5950 11900
-Wire Wire Line
-	6050 12000 7650 12000
+	7800 11900 5950 11900
 $Comp
 L m68k-rescue:iCE40-HX4K-TQ144-Lattice_iCE_FPGA U13
 U 6 1 5CE24752
-P 7650 12000
-F 0 "U13" H 8581 11853 60  0000 L CNN
-F 1 "iCE40-HX4K-TQ144" H 8581 11747 60  0000 L CNN
-F 2 "Package_QFP:TQFP-144_20x20mm_P0.5mm" H 7650 12000 50  0001 C CNN
-F 3 "" H 7650 12000 50  0001 C CNN
-	6    7650 12000
+P 8700 12000
+F 0 "U13" H 9631 11853 60  0000 L CNN
+F 1 "iCE40-HX4K-TQ144" H 9631 11747 60  0000 L CNN
+F 2 "Package_QFP:TQFP-144_20x20mm_P0.5mm" H 8700 12000 50  0001 C CNN
+F 3 "" H 8700 12000 50  0001 C CNN
+	6    8700 12000
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1590,7 +1581,7 @@ F 3 "" H 6400 13850 50  0001 C CNN
 $EndComp
 Text GLabel 13000 10050 0    50   BiDi ~ 0
 nWP
-Text GLabel 13000 10150 0    50   BiDi ~ 0
+Text GLabel 8700 11800 0    50   BiDi ~ 0
 nHOLD
 $Comp
 L Device:C C9
@@ -4454,7 +4445,7 @@ Text GLabel 7600 12400 2    50   BiDi ~ 0
 nHOLD
 Text GLabel 7600 12300 2    50   BiDi ~ 0
 nWP
-Text GLabel 5450 12500 2    50   Output ~ 0
+Text GLabel 5450 12400 2    50   Output ~ 0
 CRESET_Bn
 $Comp
 L m68k-rescue:GND-power-m68k-rescue #PWR0126
@@ -4476,7 +4467,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 12400 6050 12400
 Wire Wire Line
-	6150 12300 6150 11800
+	6150 12300 6300 11800
 Wire Wire Line
 	6200 12300 6150 12300
 Wire Wire Line
@@ -5938,6 +5929,39 @@ Wire Wire Line
 	8300 6350 8300 6300
 Wire Wire Line
 	8300 6300 8250 6300
+Wire Wire Line
+	7900 11800 7900 11700
+Wire Wire Line
+	6300 11800 7900 11800
+Wire Wire Line
+	7550 11600 8700 11600
+Wire Wire Line
+	7900 11700 8700 11700
+Text GLabel 8500 12200 2    50   Input ~ 0
+ADBUS
+Text GLabel 13000 10150 0    50   Input ~ 0
+ADBUS
+Wire Wire Line
+	7050 11700 7850 11700
+Wire Wire Line
+	7800 11900 7800 12200
+Wire Wire Line
+	7800 12200 8500 12200
+Wire Wire Line
+	7850 11700 7850 12000
+Wire Wire Line
+	7850 12000 8700 12000
+Wire Wire Line
+	6050 12000 7600 12000
+Wire Wire Line
+	7600 12000 7600 12100
+Wire Wire Line
+	7600 12100 8150 12100
+Wire Wire Line
+	8150 12100 8150 11900
+Wire Wire Line
+	8150 11900 8700 11900
+Connection ~ 6050 12000
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
