@@ -5830,99 +5830,99 @@ Wire Wire Line
 Wire Wire Line
 	8550 6200 8450 6200
 Wire Wire Line
-	8450 6100 8550 6100
-Wire Wire Line
-	8550 6000 8450 6000
-Wire Wire Line
-	8450 5900 8550 5900
+	8450 6000 8550 6000
 Wire Wire Line
 	8550 5800 8450 5800
 Wire Wire Line
-	8450 5700 8550 5700
+	8450 5600 8550 5600
 Wire Wire Line
-	8550 5600 8450 5600
-Wire Wire Line
-	8450 5500 8550 5500
-Wire Wire Line
-	8450 5400 8550 5400
-Wire Wire Line
-	8550 5300 8450 5300
+	8550 5400 8450 5400
 Wire Wire Line
 	8450 5200 8550 5200
 Wire Wire Line
-	8550 5100 8450 5100
-Wire Wire Line
-	8450 5000 8550 5000
-Wire Wire Line
-	8550 4900 8450 4900
+	8550 5000 8450 5000
 Wire Wire Line
 	8450 4800 8550 4800
+Wire Wire Line
+	8450 6100 8550 6100
+Wire Wire Line
+	8550 5900 8450 5900
+Wire Wire Line
+	8450 5700 8550 5700
+Wire Wire Line
+	8550 5500 8450 5500
+Wire Wire Line
+	8450 5300 8550 5300
+Wire Wire Line
+	8550 5100 8450 5100
+Wire Wire Line
+	8450 4900 8550 4900
 Wire Wire Line
 	8550 4700 8450 4700
 Text Label 8450 4700 0    50   ~ 0
 d15
-Text Label 8450 4800 0    50   ~ 0
-d14
 Text Label 8450 4900 0    50   ~ 0
-d13
-Text Label 8450 5000 0    50   ~ 0
-d12
+d14
 Text Label 8450 5100 0    50   ~ 0
-d11
-Text Label 8450 5200 0    50   ~ 0
-d10
+d13
 Text Label 8450 5300 0    50   ~ 0
-d9
-Text Label 8450 5400 0    50   ~ 0
-d8
+d12
 Text Label 8450 5500 0    50   ~ 0
-d7
-Text Label 8450 5600 0    50   ~ 0
-d6
+d11
 Text Label 8450 5700 0    50   ~ 0
-d5
-Text Label 8450 5800 0    50   ~ 0
-d4
+d10
 Text Label 8450 5900 0    50   ~ 0
-d3
-Text Label 8450 6000 0    50   ~ 0
-d2
+d9
 Text Label 8450 6100 0    50   ~ 0
+d8
+Text Label 8450 4800 0    50   ~ 0
+d7
+Text Label 8450 5000 0    50   ~ 0
+d6
+Text Label 8450 5200 0    50   ~ 0
+d5
+Text Label 8450 5400 0    50   ~ 0
+d4
+Text Label 8450 5600 0    50   ~ 0
+d3
+Text Label 8450 5800 0    50   ~ 0
+d2
+Text Label 8450 6000 0    50   ~ 0
 d1
 Text Label 8450 6200 0    50   ~ 0
 d0
 Entry Wire Line
 	8450 6200 8350 6300
 Entry Wire Line
-	8450 6100 8350 6200
-Entry Wire Line
 	8450 6000 8350 6100
-Entry Wire Line
-	8450 5900 8350 6000
 Entry Wire Line
 	8450 5800 8350 5900
 Entry Wire Line
-	8450 5700 8350 5800
-Entry Wire Line
 	8450 5600 8350 5700
-Entry Wire Line
-	8450 5500 8350 5600
 Entry Wire Line
 	8450 5400 8350 5500
 Entry Wire Line
-	8450 5300 8350 5400
-Entry Wire Line
 	8450 5200 8350 5300
-Entry Wire Line
-	8450 5100 8350 5200
 Entry Wire Line
 	8450 5000 8350 5100
 Entry Wire Line
-	8450 4900 8350 5000
+	8450 4800 8350 4900
+Entry Wire Line
+	8450 6100 8350 6200
+Entry Wire Line
+	8450 5900 8350 6000
+Entry Wire Line
+	8450 5700 8350 5800
+Entry Wire Line
+	8450 5500 8350 5600
+Entry Wire Line
+	8450 5300 8350 5400
+Entry Wire Line
+	8450 5100 8350 5200
 Entry Wire Line
 	8450 4700 8350 4800
 Entry Wire Line
-	8450 4800 8350 4900
+	8450 4900 8350 5000
 Wire Bus Line
 	7400 4800 8350 4800
 Connection ~ 7400 4800

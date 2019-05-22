@@ -4407,7 +4407,7 @@ Wire Bus Line
 Wire Bus Line
 	5800 1400 5300 1400
 Wire Bus Line
-	6100 4950 7400 4950
+	6100 4800 7400 4800
 Wire Wire Line
 	8450 7300 8450 7550
 Connection ~ 10000 7550
@@ -5924,6 +5924,21 @@ Entry Wire Line
 Entry Wire Line
 	8450 4800 8350 4900
 Wire Bus Line
+	7400 4800 8350 4800
+Connection ~ 7400 4800
+Wire Wire Line
+	8550 4600 7950 4600
+Wire Wire Line
+	8550 6300 8400 6300
+Wire Wire Line
+	8400 6300 8400 6350
+Wire Wire Line
+	8400 6350 8300 6350
+Wire Wire Line
+	8300 6350 8300 6300
+Wire Wire Line
+	8300 6300 8250 6300
+Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
 	18200 2100 18200 2800
@@ -5942,7 +5957,9 @@ Wire Bus Line
 Wire Bus Line
 	4100 1400 4100 5550
 Wire Bus Line
-	6100 4950 6100 9250
+	8350 4800 8350 6300
+Wire Bus Line
+	6100 4800 6100 9250
 Wire Bus Line
 	3300 1400 3300 3700
 Wire Bus Line
@@ -5950,7 +5967,7 @@ Wire Bus Line
 Wire Bus Line
 	8350 1300 8350 4350
 Wire Bus Line
-	7400 1300 7400 4950
+	7400 1300 7400 4800
 Wire Bus Line
 	3300 3900 3300 9350
 $EndSCHEMATC
