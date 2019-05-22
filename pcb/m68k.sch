@@ -2688,7 +2688,7 @@ Text GLabel 5900 8350 2    50   Input ~ 0
 DIR
 Text GLabel 5900 6650 2    50   Input ~ 0
 DIR
-Text GLabel 18700 4000 0    50   Output ~ 0
+Text GLabel 7950 4600 0    50   Output ~ 0
 DIR
 Wire Wire Line
 	18700 4000 18800 4000
@@ -5397,7 +5397,7 @@ Text GLabel 1050 4200 0    50   Input ~ 0
 BERRn
 Wire Wire Line
 	1050 4200 1150 4200
-Text GLabel 7950 4600 0    50   Output ~ 0
+Text GLabel 18700 4000 0    50   Output ~ 0
 BERRn
 $Comp
 L Connector:Micro_SD_Card J8

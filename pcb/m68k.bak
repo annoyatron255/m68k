@@ -1469,7 +1469,7 @@ Wire Wire Line
 Connection ~ 6600 11300
 Wire Wire Line
 	6600 11300 7050 11300
-Text GLabel 5450 12400 2    50   Input ~ 0
+Text GLabel 5450 12500 2    50   Input ~ 0
 CDONE
 Wire Wire Line
 	5350 12400 5450 12400
@@ -2555,8 +2555,6 @@ Wire Wire Line
 	11300 9450 11600 9450
 NoConn ~ 11300 9750
 NoConn ~ 11300 9050
-Wire Wire Line
-	11300 9650 11700 9650
 $Comp
 L power:+5V #PWR0147
 U 1 1 6D45D3BD
@@ -3304,14 +3302,6 @@ F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 12050 8650 50  0001 C CNN
 	1    12050 8650
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	11300 9150 13100 9150
-Wire Wire Line
-	11300 9250 13100 9250
-Wire Wire Line
-	11600 9350 13100 9350
-Wire Wire Line
-	11700 9450 13100 9450
 $Comp
 L Device:R R22
 U 1 1 73EFB628
@@ -4445,7 +4435,7 @@ Text GLabel 7600 12400 2    50   BiDi ~ 0
 nHOLD
 Text GLabel 7600 12300 2    50   BiDi ~ 0
 nWP
-Text GLabel 5450 12500 2    50   Output ~ 0
+Text GLabel 5450 12400 2    50   Output ~ 0
 CRESET_Bn
 $Comp
 L m68k-rescue:GND-power-m68k-rescue #PWR0126
@@ -5422,8 +5412,6 @@ F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10400 9350 50 
 $EndComp
 Wire Wire Line
 	11600 9450 11600 9350
-Wire Wire Line
-	11700 9650 11700 9450
 Text Label 18700 1900 0    50   ~ 0
 b0
 Text Label 18700 1800 0    50   ~ 0
@@ -5961,6 +5949,35 @@ Wire Wire Line
 	8150 12100 8150 11900
 Wire Wire Line
 	8150 11900 8700 11900
+Connection ~ 6050 12000
+Wire Wire Line
+	11300 9150 11850 9150
+Wire Wire Line
+	11850 9150 11850 9450
+Wire Wire Line
+	11850 9450 13100 9450
+Wire Wire Line
+	11300 9650 12050 9650
+Wire Wire Line
+	12050 9650 12050 9150
+Wire Wire Line
+	12050 9150 13100 9150
+Wire Wire Line
+	11600 9350 12150 9350
+Wire Wire Line
+	12150 9350 12150 9250
+Wire Wire Line
+	12150 9250 13100 9250
+Wire Wire Line
+	11300 9250 11950 9250
+Wire Wire Line
+	11950 9250 11950 9400
+Wire Wire Line
+	11950 9400 12250 9400
+Wire Wire Line
+	12250 9400 12250 9350
+Wire Wire Line
+	12250 9350 13100 9350
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
@@ -5993,5 +6010,4 @@ Wire Bus Line
 	7400 1300 7400 4800
 Wire Bus Line
 	3300 3900 3300 9350
-Connection ~ 6050 12000
 $EndSCHEMATC
