@@ -2506,10 +2506,8 @@ F 3 "" H 7350 7750 50  0001 C CNN
 $EndComp
 Text GLabel 6950 8250 0    50   BiDi ~ 0
 RESETn
-Text GLabel 8350 8250 2    50   Input ~ 0
+Text GLabel 8300 8250 2    50   Input ~ 0
 CDONE
-Wire Wire Line
-	8250 8250 8350 8250
 $Comp
 L power:+3V3 #PWR0156
 U 1 1 6D9D0502
@@ -2684,10 +2682,6 @@ Wire Wire Line
 	13450 2450 13450 2500
 Wire Wire Line
 	13450 2500 13500 2500
-Wire Wire Line
-	8250 8350 8350 8350
-Wire Wire Line
-	8350 8450 8250 8450
 Text GLabel 13000 9650 0    50   BiDi ~ 0
 PS2_DATA
 Text GLabel 13000 9550 0    50   Output ~ 0
@@ -4231,9 +4225,9 @@ F 3 "" H 8550 4600 50  0001 C CNN
 	2    8550 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 8350 8450 2    50   Input ~ 0
+Text GLabel 8300 8450 2    50   Input ~ 0
 PS2_CLK
-Text GLabel 8350 8350 2    50   BiDi ~ 0
+Text GLabel 8300 8350 2    50   BiDi ~ 0
 PS2_DATA
 Wire Wire Line
 	5350 12500 5450 12500
@@ -5926,6 +5920,23 @@ Wire Wire Line
 Connection ~ 6650 9750
 Wire Wire Line
 	6550 8350 6550 9950
+Connection ~ 6550 9950
+Wire Wire Line
+	7850 8450 8300 8450
+Wire Wire Line
+	7850 8350 8300 8350
+Wire Wire Line
+	7850 8250 8300 8250
+Wire Wire Line
+	7850 8150 8750 8150
+Wire Wire Line
+	8750 8150 8750 10300
+Wire Wire Line
+	8750 10300 12150 10300
+Wire Wire Line
+	12150 10300 12150 9750
+Wire Wire Line
+	12150 9750 13100 9750
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
@@ -5958,5 +5969,4 @@ Wire Bus Line
 	8350 1300 8350 4350
 Wire Bus Line
 	3300 3900 3300 9350
-Connection ~ 6550 9950
 $EndSCHEMATC

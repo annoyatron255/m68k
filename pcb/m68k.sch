@@ -1292,7 +1292,7 @@ Wire Wire Line
 	1550 15000 1550 14950
 Connection ~ 1550 14950
 Wire Wire Line
-	7050 8250 6950 8250
+	7050 8150 6950 8150
 Wire Wire Line
 	6950 7000 7050 7000
 Wire Wire Line
@@ -2504,9 +2504,9 @@ F 3 "" H 7350 7750 50  0001 C CNN
 	1    7350 7750
 	1    0    0    -1  
 $EndComp
-Text GLabel 6950 8250 0    50   BiDi ~ 0
+Text GLabel 6950 8150 0    50   BiDi ~ 0
 RESETn
-Text GLabel 8300 8250 2    50   Input ~ 0
+Text GLabel 8300 8150 2    50   Input ~ 0
 CDONE
 $Comp
 L power:+3V3 #PWR0156
@@ -3948,7 +3948,7 @@ Text Label 3400 8950 0    50   ~ 0
 D9
 Wire Wire Line
 	3400 8950 3500 8950
-Text GLabel 6950 8150 0    50   BiDi ~ 0
+Text GLabel 6950 8250 0    50   BiDi ~ 0
 HALTn
 Wire Wire Line
 	5350 4750 5100 4750
@@ -5910,7 +5910,7 @@ Wire Wire Line
 NoConn ~ 7850 8850
 NoConn ~ 7050 8850
 Wire Wire Line
-	6950 8150 7050 8150
+	6950 8250 7050 8250
 Wire Wire Line
 	6550 8350 7050 8350
 Wire Wire Line
@@ -5926,17 +5926,17 @@ Wire Wire Line
 Wire Wire Line
 	7850 8350 8300 8350
 Wire Wire Line
-	7850 8250 8300 8250
+	7850 8150 8300 8150
 Wire Wire Line
-	7850 8150 8750 8150
-Wire Wire Line
-	8750 8150 8750 10300
+	7850 8250 8750 8250
 Wire Wire Line
 	8750 10300 12150 10300
 Wire Wire Line
 	12150 10300 12150 9750
 Wire Wire Line
 	12150 9750 13100 9750
+Wire Wire Line
+	8750 8250 8750 10300
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
