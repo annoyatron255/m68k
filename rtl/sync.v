@@ -2,7 +2,7 @@ module sync(
 	input clk,
 	input async,
 	output reg sync
-)
+);
 
 reg r1;
 

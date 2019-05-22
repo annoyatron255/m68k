@@ -2,13 +2,18 @@ module m68k (
 	input clk12,
 	output CLK68000,
 
-	inout [23:1] addr,
-	inout [15:0] data,
+	//inout [23:1] addr,
+	//inout [15:0] data,
+	input [23:1] addr,
+	output [15:0] data,
 
 	input ASn,
-	inout R_Wn,
-	inout UDSn,
-	inout LDSn,
+	//inout R_Wn,
+	//inout UDSn,
+	//inout LDSn,
+	input R_Wn,
+	input UDSn,
+	input LDSn,
 	output reg DTACKn,
 
 	output BRn,
@@ -37,13 +42,13 @@ module m68k (
 	output SRAM_OEn
 );
 
-wire [15:0] data_out;
+reg [15:0] data_out;
 wire [15:0] data_in;
 
-`ifdef __sim__
+//`ifdef __sim__
 assign data = DIR ? data_out : 16'hZZZZ;
 assign data_in = data;
-`else // iCE40
+/*`else // iCE40
 SB_IO #( // Manually instantiate tristate IO because of yosys issues
 	.PIN_TYPE(6'b1010_01), // Output: PIN_OUTPUT_TRISTATE Input: PIN_INPUT
 	.PULLUP(1'b0) // Disable internal pullup
@@ -53,7 +58,7 @@ SB_IO #( // Manually instantiate tristate IO because of yosys issues
 	.D_OUT_0(data_out),
 	.D_IN_0(data_in)
 );
-`endif
+`endif*/
 
 assign CLK68000 = clk12;
 
@@ -61,7 +66,7 @@ assign CLK68000 = clk12;
 assign BRn = 1;
 assign BGACKn = 1;
 
-assign IPLn[2:0] 2'b111;
+assign IPLn[2:0] = 3'b111;
 
 assign VPAn = 1;
 
@@ -78,13 +83,19 @@ assign SRAM_OEn = 1;
 reg [15:0] boot_rom [0:1024];
 initial $readmemh("../src/build/init.hex", boot_rom);
 
-// Note that I should double flop the input control signals on the real thing
+wire ASn_clk12;
+sync ASn_sync (
+	.clk(clk12),
+	.async(ASn),
+	.sync(ASn_clk12)
+);
+
 always @ (posedge clk12) begin
-	if (!ASn) begin
+	if (!ASn_clk12) begin
 		data_out <= boot_rom[addr[10:1]]; // Read
 		DTACKn <= 0;
 		DIR <= 1;
-	else begin
+	end else begin
 		DTACKn <= 1;
 		DIR <= 0;
 	end

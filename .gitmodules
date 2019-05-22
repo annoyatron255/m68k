@@ -1,0 +1,3 @@
+[submodule "sim/j68_cpu"]
+	path = sim/j68_cpu
+	url = https://github.com/fredrequin/j68_cpu.git
