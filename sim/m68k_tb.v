@@ -22,11 +22,11 @@ end
 wire [31:0] addr;
 wire [15:0] data;
 
-wire AS;
+wire ASn;
 wire R_Wn;
 wire UDS;
 wire LDS;
-wire reg DTACKn;
+wire DTACKn;
 
 wire BRn;
 wire BGn;
@@ -46,7 +46,7 @@ wire HALTn;
 
 wire DATA_OEn;
 wire ADDR_OE;
-wire reg DIR;
+wire DIR;
 
 wire RX;
 wire TX;
@@ -60,7 +60,7 @@ m68k m68k_inst(
 	.addr(addr[23:1]),
 	.data(data),
 
-	.ASn(!AS),
+	.ASn(ASn),
 	.R_Wn(R_Wn),
 	.UDSn(!UDS),
 	.LDSn(!LDS),
@@ -93,22 +93,31 @@ m68k m68k_inst(
 );
 
 reg rst = 0;
-
+wire rd_ena;
+wire wr_ena;
+wire [15:0] wr_data;
+wire [15:0] rd_data;
 cpu_j68 cpu_j68_inst(
 	.rst(rst),
 	.clk(CLK68000),
 	.clk_ena(1'b1),
 
-	.rd_ena(AS),
-	.wr_ena(),
+	.rd_ena(rd_ena),
+	.wr_ena(wr_ena),
 	.data_ack(!DTACKn),
 	.byte_ena({UDS, LDS}),
 	.address(addr),
 	.rd_data(data),
-	.wr_data(),
+	.wr_data(wr_data),
 	.fc(FC),
 	.ipl_n(IPLn)
 );
+
+assign ASn = !(rd_ena || wr_ena);
+assign R_Wn = !wr_ena;
+
+assign rd_data = data;
+assign data = DIR ? 16'hZZZZ : wr_data;
 
 initial begin
 	$dumpfile("build/dump.vcd");

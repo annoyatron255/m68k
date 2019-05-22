@@ -80,8 +80,10 @@ assign DATA_OEn = 0;
 assign SRAM_OEn = 1;
 
 // Allocate boot rom to 2KiB
-reg [15:0] boot_rom [0:1024];
-initial $readmemh("../src/build/init.hex", boot_rom);
+//reg [15:0] boot_rom [0:1024];
+//initial $readmemh("../src/build/init.hex", boot_rom);
+reg [15:0] boot_rom [0:1048575];
+initial $readmemh("../src/build/monitor.hex", boot_rom);
 
 wire ASn_clk12;
 sync ASn_sync (
@@ -89,12 +91,22 @@ sync ASn_sync (
 	.async(ASn),
 	.sync(ASn_clk12)
 );
+wire R_Wn_clk12;
+sync R_Wn_sync (
+	.clk(clk12),
+	.async(R_Wn),
+	.sync(R_Wn_clk12)
+);
 
 always @ (posedge clk12) begin
-	if (!ASn_clk12) begin
-		data_out <= boot_rom[addr[10:1]]; // Read
+	if (!ASn_clk12 && R_Wn_clk12) begin
+		data_out <= boot_rom[addr]; // Read
 		DTACKn <= 0;
 		DIR <= 1;
+	end else if (!ASn_clk12 && !R_Wn_clk12) begin
+		boot_rom[addr] <= data_in;
+		DTACKn <= 0;
+		DIR <= 0;
 	end else begin
 		DTACKn <= 1;
 		DIR <= 0;
