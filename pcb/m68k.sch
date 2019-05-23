@@ -814,7 +814,7 @@ Wire Wire Line
 Connection ~ 2150 6050
 Wire Wire Line
 	2150 6050 2150 6100
-Text GLabel 7900 2900 0    50   Input ~ 0
+Text GLabel 7750 2900 0    50   Input ~ 0
 clk12
 Wire Wire Line
 	8300 2900 8300 2950
@@ -1292,51 +1292,23 @@ Wire Wire Line
 	1550 15000 1550 14950
 Connection ~ 1550 14950
 Wire Wire Line
-	7050 8150 6950 8150
+	6950 7100 6850 7100
 Wire Wire Line
-	6950 7000 7050 7000
-Wire Wire Line
-	7050 6900 6950 6900
-Wire Wire Line
-	6950 6800 7050 6800
+	6850 7000 6950 7000
 Text GLabel 12900 8950 0    50   Output ~ 0
 VPAn
-Text GLabel 6950 7000 0    50   Input ~ 0
-E
-Text GLabel 6950 6900 0    50   Input ~ 0
+Text GLabel 6850 7100 0    50   Input ~ 0
 VMAn
 Text GLabel 12900 8850 0    50   Output ~ 0
 BRn
-Text GLabel 6950 6800 0    50   Input ~ 0
+Text GLabel 6850 7000 0    50   Input ~ 0
 BGn
 Text GLabel 12900 8750 0    50   Output ~ 0
 BGACKn
-$Comp
-L m68k-rescue:GND-power #PWR0123
-U 1 1 5F62D005
-P 7450 9150
-F 0 "#PWR0123" H 7450 8900 50  0001 C CNN
-F 1 "GND" H 7455 8977 50  0000 C CNN
-F 2 "" H 7450 9150 50  0001 C CNN
-F 3 "" H 7450 9150 50  0001 C CNN
-	1    7450 9150
-	1    0    0    -1  
-$EndComp
-$Comp
-L m68k-rescue:TXB0108DQSR-Logic_LevelTranslator-m68k-rescue U12
-U 1 1 5F62CFFE
-P 7450 8450
-F 0 "U12" H 7700 7800 50  0000 C CNN
-F 1 "TXB0108DQSR" H 7150 7800 50  0000 C CNN
-F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 7450 7700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 7450 8350 50  0001 C CNN
-	1    7450 8450
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	6950 6700 7050 6700
+	6850 6900 6950 6900
 Wire Wire Line
-	7050 6600 6950 6600
+	6950 6800 6850 6800
 Text GLabel 12900 8650 0    50   Output ~ 0
 IPL2n
 Text GLabel 12900 8550 0    50   Output ~ 0
@@ -1344,49 +1316,47 @@ IPL1n
 Text GLabel 12900 8450 0    50   Output ~ 0
 IPL0n
 Wire Wire Line
-	7050 6500 6950 6500
+	6950 6700 6850 6700
 Text GLabel 12900 8350 0    50   Output ~ 0
 DTACKn
 Wire Wire Line
-	6950 8750 7050 8750
+	6850 6600 6950 6600
 Wire Wire Line
-	7050 8650 6950 8650
+	6950 6500 6850 6500
 Wire Wire Line
-	6950 8550 7050 8550
-Text GLabel 6950 8550 0    50   Input ~ 0
+	6850 6400 6950 6400
+Text GLabel 6850 6400 0    50   Input ~ 0
 R_Wn
-Text GLabel 6950 8750 0    50   Input ~ 0
+Text GLabel 6850 6600 0    50   Input ~ 0
 LDSn
-Text GLabel 6950 8650 0    50   Input ~ 0
+Text GLabel 6850 6500 0    50   Input ~ 0
 UDSn
-Text GLabel 6950 7100 0    50   Input ~ 0
-ASn
 $Comp
 L m68k-rescue:GND-power #PWR0124
 U 1 1 5E8FC54D
-P 7450 7500
-F 0 "#PWR0124" H 7450 7250 50  0001 C CNN
-F 1 "GND" H 7455 7327 50  0000 C CNN
-F 2 "" H 7450 7500 50  0001 C CNN
-F 3 "" H 7450 7500 50  0001 C CNN
-	1    7450 7500
+P 7350 7400
+F 0 "#PWR0124" H 7350 7150 50  0001 C CNN
+F 1 "GND" H 7355 7227 50  0000 C CNN
+F 2 "" H 7350 7400 50  0001 C CNN
+F 3 "" H 7350 7400 50  0001 C CNN
+	1    7350 7400
 	1    0    0    -1  
 $EndComp
 $Comp
 L m68k-rescue:TXB0108DQSR-Logic_LevelTranslator-m68k-rescue U11
 U 1 1 5F19469D
-P 7450 6800
-F 0 "U11" H 7700 6150 50  0000 C CNN
-F 1 "TXB0108DQSR" H 7150 6150 50  0000 C CNN
-F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 7450 6050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 7450 6700 50  0001 C CNN
-	1    7450 6800
+P 7350 6700
+F 0 "U11" H 7600 6050 50  0000 C CNN
+F 1 "TXB0108DQSR" H 7050 6050 50  0000 C CNN
+F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 7350 5950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 7350 6600 50  0001 C CNN
+	1    7350 6700
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 3400 8050 3400
+	7200 3400 7950 3400
 Wire Wire Line
-	7200 3500 8150 3500
+	7200 3500 8050 3500
 Text GLabel 5450 12500 2    50   Input ~ 0
 CDONE
 Wire Wire Line
@@ -2374,11 +2344,11 @@ Wire Wire Line
 Connection ~ 14100 4000
 Wire Wire Line
 	14100 4000 13850 4000
-Text GLabel 6950 6500 0    50   Input ~ 0
+Text GLabel 6850 6700 0    50   Input ~ 0
 FC0
-Text GLabel 6950 6600 0    50   Input ~ 0
+Text GLabel 6850 6800 0    50   Input ~ 0
 FC1
-Text GLabel 6950 6700 0    50   Input ~ 0
+Text GLabel 6850 6900 0    50   Input ~ 0
 FC2
 Wire Wire Line
 	18000 3000 18300 3000
@@ -2485,29 +2455,14 @@ Connection ~ 3400 8250
 $Comp
 L power:+5V #PWR0153
 U 1 1 6D826735
-P 7350 6100
-F 0 "#PWR0153" H 7350 5950 50  0001 C CNN
-F 1 "+5V" H 7365 6273 50  0000 C CNN
-F 2 "" H 7350 6100 50  0001 C CNN
-F 3 "" H 7350 6100 50  0001 C CNN
-	1    7350 6100
+P 7250 6000
+F 0 "#PWR0153" H 7250 5850 50  0001 C CNN
+F 1 "+5V" H 7265 6173 50  0000 C CNN
+F 2 "" H 7250 6000 50  0001 C CNN
+F 3 "" H 7250 6000 50  0001 C CNN
+	1    7250 6000
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0154
-U 1 1 6D826E26
-P 7350 7750
-F 0 "#PWR0154" H 7350 7600 50  0001 C CNN
-F 1 "+5V" H 7365 7923 50  0000 C CNN
-F 2 "" H 7350 7750 50  0001 C CNN
-F 3 "" H 7350 7750 50  0001 C CNN
-	1    7350 7750
-	1    0    0    -1  
-$EndComp
-Text GLabel 6950 8150 0    50   BiDi ~ 0
-RESETn
-Text GLabel 8300 8150 2    50   Input ~ 0
-CDONE
 $Comp
 L power:+3V3 #PWR0156
 U 1 1 6D9D0502
@@ -2553,7 +2508,7 @@ Text GLabel 5900 8350 2    50   Input ~ 0
 DIR
 Text GLabel 5900 6650 2    50   Input ~ 0
 DIR
-Text GLabel 7850 4600 0    50   Output ~ 0
+Text GLabel 7750 4600 0    50   Output ~ 0
 DIR
 Wire Wire Line
 	18700 4000 18800 4000
@@ -2576,23 +2531,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0162
 U 1 1 6FEC8255
-P 7550 6100
-F 0 "#PWR0162" H 7550 5950 50  0001 C CNN
-F 1 "+3V3" H 7565 6273 50  0000 C CNN
-F 2 "" H 7550 6100 50  0001 C CNN
-F 3 "" H 7550 6100 50  0001 C CNN
-	1    7550 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0163
-U 1 1 6FF524DA
-P 7550 7750
-F 0 "#PWR0163" H 7550 7600 50  0001 C CNN
-F 1 "+3V3" H 7565 7923 50  0000 C CNN
-F 2 "" H 7550 7750 50  0001 C CNN
-F 3 "" H 7550 7750 50  0001 C CNN
-	1    7550 7750
+P 7450 6000
+F 0 "#PWR0162" H 7450 5850 50  0001 C CNN
+F 1 "+3V3" H 7465 6173 50  0000 C CNN
+F 2 "" H 7450 6000 50  0001 C CNN
+F 3 "" H 7450 6000 50  0001 C CNN
+	1    7450 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3058,19 +3002,6 @@ F 3 "~" H 10800 1350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10800 1350 10800 1400
-$Comp
-L power:+3V3 #PWR0182
-U 1 1 731E82A3
-P 7850 7750
-F 0 "#PWR0182" H 7850 7600 50  0001 C CNN
-F 1 "+3V3" H 7850 7900 50  0000 C CNN
-F 2 "" H 7850 7750 50  0001 C CNN
-F 3 "" H 7850 7750 50  0001 C CNN
-	1    7850 7750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7850 7750 7850 8050
 Wire Wire Line
 	2450 11800 2450 13300
 $Comp
@@ -3183,7 +3114,7 @@ F 3 "" H 12050 8300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	12050 8300 12050 8550
-Text GLabel 7850 4000 0    50   Output ~ 0
+Text GLabel 7750 4000 0    50   Output ~ 0
 ADDR_OE
 $Comp
 L Regulator_Linear:LD1117S33TR_SOT223 U16
@@ -3853,93 +3784,6 @@ F 3 "" H 15400 12450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1050 4900 1150 4900
-Wire Wire Line
-	6650 10400 6650 10600
-Wire Wire Line
-	6750 10400 6650 10400
-Wire Wire Line
-	7450 10400 7350 10400
-NoConn ~ 7350 10500
-NoConn ~ 7350 10300
-Wire Wire Line
-	6750 10500 6550 10500
-Wire Wire Line
-	6750 10300 6650 10300
-$Comp
-L m68k-rescue:GND-power-m68k-rescue #PWR0111
-U 1 1 5DD1CA3C
-P 6650 10600
-F 0 "#PWR0111" H 6650 10350 50  0001 C CNN
-F 1 "GND" H 6655 10427 50  0000 C CNN
-F 2 "" H 6650 10600 50  0001 C CNN
-F 3 "" H 6650 10600 50  0001 C CNN
-	1    6650 10600
-	1    0    0    -1  
-$EndComp
-$Comp
-L m68k-rescue:Mini-DIN-6-Connector-m68k-rescue J2
-U 1 1 5DAF8A64
-P 7050 10400
-F 0 "J2" H 7050 10767 50  0000 C CNN
-F 1 "Mini-DIN-6" H 7050 10676 50  0000 C CNN
-F 2 "MD-60S:CUI_MD-60S" H 7050 10400 50  0001 C CNN
-F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 7050 10400 50  0001 C CNN
-	1    7050 10400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L m68k-rescue:+5V-power-m68k-rescue #PWR0112
-U 1 1 5DD57328
-P 7450 9650
-F 0 "#PWR0112" H 7450 9500 50  0001 C CNN
-F 1 "+5V" H 7465 9823 50  0000 C CNN
-F 2 "" H 7450 9650 50  0001 C CNN
-F 3 "" H 7450 9650 50  0001 C CNN
-	1    7450 9650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 9650 7450 9750
-Connection ~ 7450 9750
-Wire Wire Line
-	7200 9750 7450 9750
-Wire Wire Line
-	7450 9750 7450 9950
-Wire Wire Line
-	7450 9950 7450 10400
-Connection ~ 7450 9950
-Wire Wire Line
-	7200 9950 7450 9950
-Wire Wire Line
-	6550 10500 6550 9950
-Wire Wire Line
-	6900 9950 6550 9950
-Wire Wire Line
-	6650 10300 6650 9750
-Wire Wire Line
-	6900 9750 6650 9750
-$Comp
-L Device:R R14
-U 1 1 709CB656
-P 7050 9950
-F 0 "R14" V 6950 9950 50  0000 C CNN
-F 1 "10k" V 7050 9950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 9950 50  0001 C CNN
-F 3 "~" H 7050 9950 50  0001 C CNN
-	1    7050 9950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 709CAD1C
-P 7050 9750
-F 0 "R13" V 6950 9750 50  0000 C CNN
-F 1 "10k" V 7050 9750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 9750 50  0001 C CNN
-F 3 "~" H 7050 9750 50  0001 C CNN
-	1    7050 9750
-	0    1    1    0   
-$EndComp
 Text Label 3400 8750 0    50   ~ 0
 D10
 Wire Wire Line
@@ -3948,8 +3792,6 @@ Text Label 3400 8950 0    50   ~ 0
 D9
 Wire Wire Line
 	3400 8950 3500 8950
-Text GLabel 6950 8250 0    50   BiDi ~ 0
-HALTn
 Wire Wire Line
 	5350 4750 5100 4750
 Wire Wire Line
@@ -4225,10 +4067,6 @@ F 3 "" H 8550 4600 50  0001 C CNN
 	2    8550 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 8300 8450 2    50   Input ~ 0
-PS2_CLK
-Text GLabel 8300 8350 2    50   BiDi ~ 0
-PS2_DATA
 Wire Wire Line
 	5350 12500 5450 12500
 Wire Wire Line
@@ -4471,11 +4309,7 @@ Entry Wire Line
 	3300 9350 3400 9250
 Entry Wire Line
 	3300 7650 3400 7550
-Wire Wire Line
-	6950 7100 7050 7100
-Wire Wire Line
-	7850 5800 7850 6400
-Text GLabel 7850 5800 0    50   Input ~ 0
+Text GLabel 7750 5700 0    50   Input ~ 0
 ADDR_OE
 $Comp
 L Device:C C46
@@ -5452,7 +5286,7 @@ Entry Wire Line
 Entry Wire Line
 	4100 5250 4200 5150
 Wire Wire Line
-	7200 3000 8250 3000
+	7200 3000 8150 3000
 Entry Wire Line
 	8350 3600 8450 3500
 Entry Wire Line
@@ -5498,8 +5332,6 @@ Entry Wire Line
 Entry Wire Line
 	8450 2200 8350 2300
 Wire Wire Line
-	7950 3100 7950 2300
-Wire Wire Line
 	8300 2300 8300 2350
 Wire Wire Line
 	8300 2350 8400 2350
@@ -5508,12 +5340,9 @@ Wire Wire Line
 Wire Wire Line
 	8400 2300 8550 2300
 Wire Wire Line
-	8050 2400 8050 3400
+	7950 2400 7950 3400
 Wire Wire Line
-	8150 2500 8550 2500
-Connection ~ 8150 3500
-Wire Wire Line
-	8150 2500 8150 3500
+	8050 2500 8050 3500
 Wire Wire Line
 	8400 4000 8400 4050
 Wire Wire Line
@@ -5656,29 +5485,7 @@ Wire Wire Line
 Wire Wire Line
 	12250 9350 13100 9350
 Wire Wire Line
-	7850 4000 8300 4000
-Wire Wire Line
-	7850 4600 8550 4600
-Connection ~ 7950 3100
-Wire Wire Line
-	7950 3100 7200 3100
-Connection ~ 8050 3400
-Wire Wire Line
-	7850 6500 8550 6500
-Wire Wire Line
-	7850 6600 8550 6600
-Wire Wire Line
-	7850 6700 8550 6700
-Wire Wire Line
-	7900 2900 8300 2900
-Wire Wire Line
-	7950 2300 8300 2300
-Wire Wire Line
-	8050 2400 8550 2400
-Wire Wire Line
-	8250 6350 8400 6350
-Wire Wire Line
-	8250 3000 8250 6350
+	8150 3000 8150 6350
 Entry Wire Line
 	8450 7200 8350 7300
 Wire Wire Line
@@ -5886,57 +5693,258 @@ Wire Wire Line
 Wire Wire Line
 	6650 11800 8350 11800
 Wire Wire Line
-	7850 6800 8550 6800
-Wire Wire Line
-	7850 6900 8550 6900
-Wire Wire Line
-	7850 7000 8550 7000
-Wire Wire Line
-	7850 7100 8550 7100
-Wire Wire Line
-	7950 8550 7850 8550
-NoConn ~ 7850 7200
-NoConn ~ 7050 7200
-Wire Wire Line
-	8150 3500 8150 8750
-Wire Wire Line
-	8050 3400 8050 8650
-Wire Wire Line
-	7950 3100 7950 8550
-Wire Wire Line
-	7850 8650 8050 8650
-Wire Wire Line
-	7850 8750 8150 8750
-NoConn ~ 7850 8850
-NoConn ~ 7050 8850
-Wire Wire Line
-	6950 8250 7050 8250
-Wire Wire Line
-	6550 8350 7050 8350
-Wire Wire Line
-	6650 8450 7050 8450
-Wire Wire Line
-	6650 8450 6650 9750
-Connection ~ 6650 9750
-Wire Wire Line
-	6550 8350 6550 9950
-Connection ~ 6550 9950
-Wire Wire Line
-	7850 8450 8300 8450
-Wire Wire Line
-	7850 8350 8300 8350
-Wire Wire Line
-	7850 8150 8300 8150
-Wire Wire Line
-	7850 8250 8750 8250
-Wire Wire Line
-	8750 10300 12150 10300
-Wire Wire Line
 	12150 10300 12150 9750
 Wire Wire Line
 	12150 9750 13100 9750
 Wire Wire Line
-	8750 8250 8750 10300
+	7750 5700 7750 6300
+Wire Wire Line
+	7850 3100 7850 6400
+Wire Wire Line
+	8850 8250 8850 10300
+Text GLabel 8350 8350 2    50   BiDi ~ 0
+PS2_DATA
+Text GLabel 8350 8450 2    50   Input ~ 0
+PS2_CLK
+Text GLabel 8350 8150 2    50   Input ~ 0
+CDONE
+Wire Wire Line
+	7850 2300 7850 3100
+Wire Wire Line
+	7750 2900 8300 2900
+Connection ~ 7850 3100
+Wire Wire Line
+	7850 3100 7200 3100
+Connection ~ 7950 3400
+Connection ~ 8050 3500
+Wire Wire Line
+	7750 4600 8550 4600
+Wire Wire Line
+	7750 4000 8300 4000
+Wire Wire Line
+	7850 2300 8300 2300
+Wire Wire Line
+	7950 2400 8550 2400
+Wire Wire Line
+	8050 2500 8550 2500
+Wire Wire Line
+	8150 6350 8400 6350
+Wire Wire Line
+	7750 6400 7850 6400
+Wire Wire Line
+	7950 3400 7950 6500
+Wire Wire Line
+	8050 3500 8050 6600
+Wire Wire Line
+	7750 6600 8050 6600
+Wire Wire Line
+	7750 6500 7950 6500
+Wire Wire Line
+	7750 6700 8550 6700
+Wire Wire Line
+	7750 6800 8550 6800
+Wire Wire Line
+	7750 6900 8550 6900
+Wire Wire Line
+	7750 7000 8550 7000
+Wire Wire Line
+	7750 7100 8550 7100
+Wire Wire Line
+	8550 6500 8150 6500
+Wire Wire Line
+	8150 6500 8150 8750
+Wire Wire Line
+	8550 6600 8250 6600
+Wire Wire Line
+	8850 10300 12150 10300
+Wire Wire Line
+	8250 6600 8250 8850
+Connection ~ 6450 9950
+Wire Wire Line
+	6450 8350 6450 9950
+Connection ~ 6550 9750
+Wire Wire Line
+	6550 8450 6550 9750
+Wire Wire Line
+	6550 8450 6950 8450
+Wire Wire Line
+	6450 8350 6950 8350
+Wire Wire Line
+	6850 8250 6950 8250
+Wire Wire Line
+	6850 8850 6950 8850
+Text GLabel 6850 8250 0    50   BiDi ~ 0
+HALTn
+$Comp
+L Device:R R13
+U 1 1 709CAD1C
+P 6950 9750
+F 0 "R13" V 6850 9750 50  0000 C CNN
+F 1 "10k" V 6950 9750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 9750 50  0001 C CNN
+F 3 "~" H 6950 9750 50  0001 C CNN
+	1    6950 9750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 709CB656
+P 6950 9950
+F 0 "R14" V 6850 9950 50  0000 C CNN
+F 1 "10k" V 6950 9950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 9950 50  0001 C CNN
+F 3 "~" H 6950 9950 50  0001 C CNN
+	1    6950 9950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 9750 6550 9750
+Wire Wire Line
+	6550 10300 6550 9750
+Wire Wire Line
+	6800 9950 6450 9950
+Wire Wire Line
+	6450 10500 6450 9950
+Wire Wire Line
+	7100 9950 7350 9950
+Connection ~ 7350 9950
+Wire Wire Line
+	7350 9950 7350 10400
+Wire Wire Line
+	7350 9750 7350 9950
+Wire Wire Line
+	7100 9750 7350 9750
+Connection ~ 7350 9750
+Wire Wire Line
+	7350 9650 7350 9750
+$Comp
+L m68k-rescue:+5V-power-m68k-rescue #PWR0112
+U 1 1 5DD57328
+P 7350 9650
+F 0 "#PWR0112" H 7350 9500 50  0001 C CNN
+F 1 "+5V" H 7365 9823 50  0000 C CNN
+F 2 "" H 7350 9650 50  0001 C CNN
+F 3 "" H 7350 9650 50  0001 C CNN
+	1    7350 9650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L m68k-rescue:Mini-DIN-6-Connector-m68k-rescue J2
+U 1 1 5DAF8A64
+P 6950 10400
+F 0 "J2" H 6950 10767 50  0000 C CNN
+F 1 "Mini-DIN-6" H 6950 10676 50  0000 C CNN
+F 2 "MD-60S:CUI_MD-60S" H 6950 10400 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 6950 10400 50  0001 C CNN
+	1    6950 10400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L m68k-rescue:GND-power-m68k-rescue #PWR0111
+U 1 1 5DD1CA3C
+P 6550 10600
+F 0 "#PWR0111" H 6550 10350 50  0001 C CNN
+F 1 "GND" H 6555 10427 50  0000 C CNN
+F 2 "" H 6550 10600 50  0001 C CNN
+F 3 "" H 6550 10600 50  0001 C CNN
+	1    6550 10600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 10300 6550 10300
+Wire Wire Line
+	6650 10500 6450 10500
+NoConn ~ 7250 10300
+NoConn ~ 7250 10500
+Wire Wire Line
+	7350 10400 7250 10400
+Wire Wire Line
+	6650 10400 6550 10400
+Wire Wire Line
+	6550 10400 6550 10600
+Wire Wire Line
+	7750 7750 7750 8050
+$Comp
+L power:+3V3 #PWR0182
+U 1 1 731E82A3
+P 7750 7750
+F 0 "#PWR0182" H 7750 7600 50  0001 C CNN
+F 1 "+3V3" H 7750 7900 50  0000 C CNN
+F 2 "" H 7750 7750 50  0001 C CNN
+F 3 "" H 7750 7750 50  0001 C CNN
+	1    7750 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0163
+U 1 1 6FF524DA
+P 7450 7750
+F 0 "#PWR0163" H 7450 7600 50  0001 C CNN
+F 1 "+3V3" H 7465 7923 50  0000 C CNN
+F 2 "" H 7450 7750 50  0001 C CNN
+F 3 "" H 7450 7750 50  0001 C CNN
+	1    7450 7750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 8150 0    50   BiDi ~ 0
+RESETn
+$Comp
+L power:+5V #PWR0154
+U 1 1 6D826E26
+P 7250 7750
+F 0 "#PWR0154" H 7250 7600 50  0001 C CNN
+F 1 "+5V" H 7265 7923 50  0000 C CNN
+F 2 "" H 7250 7750 50  0001 C CNN
+F 3 "" H 7250 7750 50  0001 C CNN
+	1    7250 7750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 8850 0    50   Input ~ 0
+ASn
+$Comp
+L m68k-rescue:TXB0108DQSR-Logic_LevelTranslator-m68k-rescue U12
+U 1 1 5F62CFFE
+P 7350 8450
+F 0 "U12" H 7600 7800 50  0000 C CNN
+F 1 "TXB0108DQSR" H 7050 7800 50  0000 C CNN
+F 2 "Package_SON:USON-20_2x4mm_P0.4mm" H 7350 7700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 7350 8350 50  0001 C CNN
+	1    7350 8450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L m68k-rescue:GND-power #PWR0123
+U 1 1 5F62D005
+P 7350 9150
+F 0 "#PWR0123" H 7350 8900 50  0001 C CNN
+F 1 "GND" H 7355 8977 50  0000 C CNN
+F 2 "" H 7350 9150 50  0001 C CNN
+F 3 "" H 7350 9150 50  0001 C CNN
+	1    7350 9150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 8750 0    50   Input ~ 0
+E
+Wire Wire Line
+	6850 8750 6950 8750
+Wire Wire Line
+	6950 8150 6850 8150
+Wire Wire Line
+	7750 8450 8350 8450
+Wire Wire Line
+	7750 8350 8350 8350
+Wire Wire Line
+	7750 8150 8350 8150
+NoConn ~ 7750 8550
+NoConn ~ 7750 8650
+NoConn ~ 6950 8550
+NoConn ~ 6950 8650
+Wire Wire Line
+	7750 8250 8850 8250
+Wire Wire Line
+	7750 8850 8250 8850
+Wire Wire Line
+	7750 8750 8150 8750
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
