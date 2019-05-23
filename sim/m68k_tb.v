@@ -5,19 +5,12 @@
 `include "../rtl/sync.v"
 `include "j68_cpu_include.v"
 
-module m68k_tb();
+module m68k_tb(
+	input clk12,
+	input rst
+);
 
-reg clk12 = 0;
-reg CLK68000 = 0;
-
-always begin
-	clk12 <= !clk12;
-	#5;
-end
-always begin
-	CLK68000 <= !CLK68000;
-	#50;
-end
+wire CLK68000;
 
 wire [31:0] addr;
 wire [15:0] data;
@@ -55,7 +48,7 @@ wire SRAM_OEn;
 
 m68k m68k_inst(
 	.clk12(clk12),
-	.CLK68000(),
+	.CLK68000(CLK68000),
 
 	.addr(addr[23:1]),
 	.data(data),
@@ -91,8 +84,7 @@ m68k m68k_inst(
 
 	.SRAM_OEn(SRAM_OEn)
 );
-
-reg rst = 0;
+/* verilator lint_off PINMISSING */
 wire rd_ena;
 wire wr_ena;
 wire [15:0] wr_data;
@@ -110,44 +102,14 @@ cpu_j68 cpu_j68_inst(
 	.rd_data(rd_data),
 	.wr_data(wr_data),
 	.fc(FC),
-	.ipl_n(IPLn)
+	.ipl_n(IPLn),
+
 );
 
 assign ASn = !(rd_ena || wr_ena);
 assign R_Wn = !wr_ena;
 
-assign rd_data = trigger_read ? {in_char, in_char} : data;
+assign rd_data = data;
 assign data = DIR ? 16'hZZZZ : wr_data;
-
-always @(negedge ASn) begin
-	if (addr >= 32'h7A000 && addr <= 32'h7BFFF) begin
-		$write("%c", data[15:8]);
-	end
-end
-
-reg trigger_read;
-always @(negedge ASn) begin
-	if (addr >= 32'h78000 && addr <= 32'h79FFF) begin
-		trigger_read <= 1;
-	end else
-		trigger_read <= 0;
-end
-
-initial begin
-	$dumpfile("build/dump.vcd");
-	$dumpvars;
-	rst = 0;
-	#5000;
-	rst = 1;
-	#5000;
-	rst = 0;
-	#1000000;
-	//$finish;
-end
-
-reg [7:0] in_char = 8'h00;
-initial begin
-	in_char = $fgetc(32'h8000_0000);
-end
 
 endmodule

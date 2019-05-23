@@ -100,11 +100,11 @@ sync R_Wn_sync (
 
 always @ (posedge clk12) begin
 	if (!ASn_clk12 && R_Wn_clk12) begin
-		data_out <= boot_rom[addr]; // Read
+		data_out <= boot_rom[addr[20:1]]; // Read
 		DTACKn <= 0;
 		DIR <= 1;
 	end else if (!ASn_clk12 && !R_Wn_clk12) begin
-		boot_rom[addr] <= data_in;
+		boot_rom[addr[20:1]] <= data_in;
 		DTACKn <= 0;
 		DIR <= 0;
 	end else begin
