@@ -1292,23 +1292,23 @@ Wire Wire Line
 	1550 15000 1550 14950
 Connection ~ 1550 14950
 Wire Wire Line
-	6950 7100 6850 7100
+	6950 6800 6850 6800
 Wire Wire Line
-	6850 7000 6950 7000
+	6850 6700 6950 6700
 Text GLabel 12900 8950 0    50   Output ~ 0
 VPAn
-Text GLabel 6850 7100 0    50   Input ~ 0
+Text GLabel 6850 6800 0    50   Input ~ 0
 VMAn
 Text GLabel 12900 8850 0    50   Output ~ 0
 BRn
-Text GLabel 6850 7000 0    50   Input ~ 0
+Text GLabel 6850 6700 0    50   Input ~ 0
 BGn
 Text GLabel 12900 8750 0    50   Output ~ 0
 BGACKn
 Wire Wire Line
 	6850 6900 6950 6900
 Wire Wire Line
-	6950 6800 6850 6800
+	6950 7000 6850 7000
 Text GLabel 12900 8650 0    50   Output ~ 0
 IPL2n
 Text GLabel 12900 8550 0    50   Output ~ 0
@@ -1316,7 +1316,7 @@ IPL1n
 Text GLabel 12900 8450 0    50   Output ~ 0
 IPL0n
 Wire Wire Line
-	6950 6700 6850 6700
+	6950 7100 6850 7100
 Text GLabel 12900 8350 0    50   Output ~ 0
 DTACKn
 Wire Wire Line
@@ -2344,9 +2344,9 @@ Wire Wire Line
 Connection ~ 14100 4000
 Wire Wire Line
 	14100 4000 13850 4000
-Text GLabel 6850 6700 0    50   Input ~ 0
+Text GLabel 6850 7100 0    50   Input ~ 0
 FC0
-Text GLabel 6850 6800 0    50   Input ~ 0
+Text GLabel 6850 7000 0    50   Input ~ 0
 FC1
 Text GLabel 6850 6900 0    50   Input ~ 0
 FC2
