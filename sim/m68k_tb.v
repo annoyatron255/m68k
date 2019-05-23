@@ -107,7 +107,7 @@ cpu_j68 cpu_j68_inst(
 	.data_ack(!DTACKn),
 	.byte_ena({UDS, LDS}),
 	.address(addr),
-	.rd_data(data),
+	.rd_data(rd_data),
 	.wr_data(wr_data),
 	.fc(FC),
 	.ipl_n(IPLn)
@@ -116,8 +116,22 @@ cpu_j68 cpu_j68_inst(
 assign ASn = !(rd_ena || wr_ena);
 assign R_Wn = !wr_ena;
 
-assign rd_data = data;
+assign rd_data = trigger_read ? {in_char, in_char} : data;
 assign data = DIR ? 16'hZZZZ : wr_data;
+
+always @(negedge ASn) begin
+	if (addr >= 32'h7A000 && addr <= 32'h7BFFF) begin
+		$write("%c", data[15:8]);
+	end
+end
+
+reg trigger_read;
+always @(negedge ASn) begin
+	if (addr >= 32'h78000 && addr <= 32'h79FFF) begin
+		trigger_read <= 1;
+	end else
+		trigger_read <= 0;
+end
 
 initial begin
 	$dumpfile("build/dump.vcd");
@@ -128,7 +142,12 @@ initial begin
 	#5000;
 	rst = 0;
 	#1000000;
-	$finish;
+	//$finish;
+end
+
+reg [7:0] in_char = 8'h00;
+initial begin
+	in_char = $fgetc(32'h8000_0000);
 end
 
 endmodule
