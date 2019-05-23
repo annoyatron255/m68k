@@ -5933,6 +5933,58 @@ Wire Wire Line
 	7300 11300 7750 11300
 Wire Wire Line
 	6750 11300 7300 11300
+Wire Wire Line
+	15150 6800 15150 7000
+Connection ~ 15150 7000
+Wire Wire Line
+	15150 7000 15150 7200
+Connection ~ 15150 7200
+Wire Wire Line
+	15150 7200 15150 7350
+$Comp
+L power:GND #PWR06
+U 1 1 5EA04520
+P 15150 7350
+F 0 "#PWR06" H 15150 7100 50  0001 C CNN
+F 1 "GND" H 15155 7177 50  0000 C CNN
+F 2 "" H 15150 7350 50  0001 C CNN
+F 3 "" H 15150 7350 50  0001 C CNN
+	1    15150 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5EA6048F
+P 15050 6800
+F 0 "H1" V 15287 6803 50  0000 C CNN
+F 1 "MountingHole_Pad" V 15196 6803 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 15050 6800 50  0001 C CNN
+F 3 "~" H 15050 6800 50  0001 C CNN
+	1    15050 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5EA61D1E
+P 15050 7000
+F 0 "H2" V 15287 7003 50  0000 C CNN
+F 1 "MountingHole_Pad" V 15196 7003 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 15050 7000 50  0001 C CNN
+F 3 "~" H 15050 7000 50  0001 C CNN
+	1    15050 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5EA63D7B
+P 15050 7200
+F 0 "H3" V 15287 7203 50  0000 C CNN
+F 1 "MountingHole_Pad" V 15196 7203 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 15050 7200 50  0001 C CNN
+F 3 "~" H 15050 7200 50  0001 C CNN
+	1    15050 7200
+	0    -1   -1   0   
+$EndComp
 Wire Bus Line
 	18600 2100 18600 2800
 Wire Bus Line
