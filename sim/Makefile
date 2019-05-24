@@ -1,19 +1,16 @@
-BUILD := build
+BUILD = obj_dir
+TARGET = m68k_tb
 
-.PHONY:	all clean $(BUILD)/m68k
+.PHONY:	all clean $(BUILD)
 
-all:	$(BUILD) $(BUILD)/dump.vcd
-
+all:	$(BUILD)/$(TARGET)
 clean:
 	@rm -rf $(BUILD)
 
-$(BUILD):
-	@[ -d $@ ] || mkdir -p $@
+$(BUILD):		main.cpp $(TARGET).v
+	@verilator --trace --cc $(TARGET).v --Mdir $(BUILD) --exe $<
+	@echo built $@
 
-$(BUILD)/m68k:
-	@iverilog -o $@ m68k_tb.v
-	@echo built $(notdir $@)
-
-$(BUILD)/dump.vcd:		$(BUILD)/m68k
-	@$<
-	@echo built $(notdir $@)
+$(BUILD)/$(TARGET):	$(BUILD)
+	@make -j -C $(BUILD) -f V$(TARGET).mk V$(TARGET)
+	@echo built V$(TARGET)

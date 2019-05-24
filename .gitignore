@@ -1,4 +1,6 @@
 build/
+obj_dir/
+dump.vcd
 # OS Garbage
 desktop.ini
 Thumbs.db

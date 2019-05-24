@@ -6,8 +6,11 @@
 `include "j68_cpu_include.v"
 
 module m68k_tb(
-	input clk12,
-	input rst
+	input clk,
+	input rst,
+
+	input [7:0] TX_data,
+	output [7:0] RX_data
 );
 
 wire CLK68000;
@@ -47,7 +50,7 @@ wire TX;
 wire SRAM_OEn;
 
 m68k m68k_inst(
-	.clk12(clk12),
+	.clk12(clk),
 	.CLK68000(CLK68000),
 
 	.addr(addr[23:1]),
@@ -81,6 +84,9 @@ m68k m68k_inst(
 
 	.RX(RX),
 	.TX(TX),
+
+	.RX_data(TX_data),
+	.TX_data(RX_data),
 
 	.SRAM_OEn(SRAM_OEn)
 );

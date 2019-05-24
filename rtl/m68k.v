@@ -1,6 +1,6 @@
 module m68k (
 	input clk12,
-	output CLK68000,
+	output reg CLK68000 = 0,
 
 	//inout [23:1] addr,
 	//inout [15:0] data,
@@ -39,6 +39,9 @@ module m68k (
 	input RX,
 	output TX,
 
+	input [7:0] RX_data,
+	output reg [7:0] TX_data,
+
 	output SRAM_OEn
 );
 
@@ -60,9 +63,12 @@ SB_IO #( // Manually instantiate tristate IO because of yosys issues
 );
 `endif*/
 
-assign CLK68000 = clk12;
+//assign CLK68000 = clk12;
+always @ (posedge clk12)
+	CLK68000 <= ~CLK68000;
 
-// Fix unneeded outputs to defined value
+
+// Fix unneeded outputs to defined values
 assign BRn = 1;
 assign BGACKn = 1;
 
@@ -100,16 +106,22 @@ sync R_Wn_sync (
 
 always @ (posedge clk12) begin
 	if (!ASn_clk12 && R_Wn_clk12) begin
-		data_out <= boot_rom[addr[20:1]]; // Read
+		if (addr[20:1] == 20'h3c000)
+			data_out <= {RX_data, RX_data};
+		else
+			data_out <= boot_rom[addr[20:1]]; // Read
 		DTACKn <= 0;
 		DIR <= 1;
 	end else if (!ASn_clk12 && !R_Wn_clk12) begin
+		if (addr[20:1] == 20'h3d000)
+			TX_data <= data_in[15:8];
 		boot_rom[addr[20:1]] <= data_in;
 		DTACKn <= 0;
 		DIR <= 0;
 	end else begin
 		DTACKn <= 1;
 		DIR <= 0;
+		TX_data <= 8'h00;
 	end
 end
 
