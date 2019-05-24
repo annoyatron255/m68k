@@ -29,13 +29,13 @@ loop:
 	bra start
 
 cout:
-	btst.b #0,0x7C000
+	btst.b #0,0x7D000
 	bne.s cout
 	move.b d0,0x7A000
 	rts
 
 cin:
-	btst.b #0,0x7D000
+	btst.b #0,0x7C000
 	bne.s cin
 	move.b 0x78000,d0
 	rts
