@@ -19,7 +19,7 @@ trap:
 	rte
 start:
 	movea.l #(message),a0
-	move.b #14,d1
+	move.b #15,d1
 loop:
 	move.b (a0)+,d0
 	jsr cout
@@ -41,4 +41,4 @@ cin:
 	rts
 
 message:
-	.ascii "Hello, World!\n"
+	.ascii "Hello, World!\r\n"
