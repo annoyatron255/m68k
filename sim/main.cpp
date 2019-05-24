@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
 
 	bool last_DTACKn = 1;
 	tb->m_core->TX_data = 'H';
+	tb->m_core->TXE = 1;
 	while(!tb->done()) {
 		tb->tick();
 
@@ -28,10 +29,12 @@ int main(int argc, char **argv) {
 		}
 		last_DTACKn = tb->m_core->m68k_tb__DOT__DTACKn;
 
-		char c = getch();
-		if (c != ERR) {
-			tb->m_core->TX_data = c;
-			tb->m_core->TXE = 0;
+		if (tb->m_core->TXE) {
+			int c = getch();
+			if (c != ERR) {
+				tb->m_core->TX_data = c;
+				tb->m_core->TXE = 0;
+			}
 		} else if (tb->m_core->TX_read) {
 			tb->m_core->TXE = 1;
 		}
