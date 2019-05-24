@@ -41,6 +41,8 @@ module m68k (
 
 	input [7:0] RX_data,
 	output reg [7:0] TX_data,
+	input TXE,
+	output reg TX_read,
 
 	output SRAM_OEn
 );
@@ -108,13 +110,18 @@ always @ (posedge clk12) begin
 	if (!ASn_clk12 && R_Wn_clk12) begin
 		if (addr[20:1] == 20'h3c000)
 			data_out <= {RX_data, RX_data};
+		else if (addr[20:1] == 20'h3e000)
+			data_out <= {16{TXE}};
 		else
 			data_out <= boot_rom[addr[20:1]]; // Read
 		DTACKn <= 0;
 		DIR <= 1;
+		TX_read <= 0;
 	end else if (!ASn_clk12 && !R_Wn_clk12) begin
-		if (addr[20:1] == 20'h3d000)
+		if (addr[20:1] == 20'h3d000) begin
 			TX_data <= data_in[15:8];
+			TX_read <= 1;
+		end
 		boot_rom[addr[20:1]] <= data_in;
 		DTACKn <= 0;
 		DIR <= 0;
@@ -122,6 +129,7 @@ always @ (posedge clk12) begin
 		DTACKn <= 1;
 		DIR <= 0;
 		TX_data <= 8'h00;
+		TX_read <= 0;
 	end
 end
 

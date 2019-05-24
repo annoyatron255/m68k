@@ -10,7 +10,9 @@ module m68k_tb(
 	input rst,
 
 	input [7:0] TX_data,
-	output [7:0] RX_data
+	output [7:0] RX_data,
+	input TXE,
+	output TX_read
 );
 
 wire CLK68000;
@@ -87,6 +89,8 @@ m68k m68k_inst(
 
 	.RX_data(TX_data),
 	.TX_data(RX_data),
+	.TXE(TXE),
+	.TX_read(TX_read),
 
 	.SRAM_OEn(SRAM_OEn)
 );

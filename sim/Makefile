@@ -8,7 +8,7 @@ clean:
 	@rm -rf $(BUILD)
 
 $(BUILD):		main.cpp $(TARGET).v
-	@verilator --trace --cc $(TARGET).v --Mdir $(BUILD) --exe $<
+	@verilator --trace --cc $(TARGET).v --Mdir $(BUILD) --exe $< -LDFLAGS -lncurses
 	@echo built $@
 
 $(BUILD)/$(TARGET):	$(BUILD)
