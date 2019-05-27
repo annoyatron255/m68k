@@ -10,7 +10,7 @@ FOOTPRINT	:= tq144:4k
 FILES		:= $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.v)))
 
 ROMSOURCE	:= ../src
-ROMFILE		:= $(ROMSOURCE)/build/rom.hex
+ROMFILE		:= $(ROMSOURCE)/build/init.hex
 
 OUTPUT		:= $(BUILD)/$(TARGET)
 
@@ -31,14 +31,14 @@ timing:			$(BUILD)/timing.txt
 $(BUILD)/timing.txt:	$(BUILD) $(TARGET).pcf $(OUTPUT)_rom.asc
 	@icetime -tmd $(DEVICETYPE) -p $(TARGET).pcf -P $(FOOTPRINT) $(OUTPUT)_rom.asc > $@
 
-$(OUTPUT)Pad.bin:	$(OUTPUT).bin $(BUILD)/4M0xFF.bin
+$(OUTPUT)Pad.bin:	$(OUTPUT).bin $(BUILD)/16M0xFF.bin
 	@echo padding $< to $@
-	@cp $(BUILD)/4M0xFF.bin $@
+	@cp $(BUILD)/16M0xFF.bin $@
 	@dd if=$< of=$@ conv=notrunc status=none
 
-$(BUILD)/4M0xFF.bin:
+$(BUILD)/16M0xFF.bin:
 	@echo creating pad file $@
-	@dd if=/dev/zero ibs=1M count=4 status=none | tr "\000" "\377" > $@ 
+	@dd if=/dev/zero ibs=1M count=16 status=none | tr "\000" "\377" > $@ 
 
 $(OUTPUT).bin:		$(OUTPUT)_rom.asc
 	@echo packing $< to $@
@@ -50,7 +50,7 @@ $(OUTPUT)_rom.asc:	$(OUTPUT).asc $(ROMFILE)
 
 $(BUILD)/rand.hex:
 	@echo creating default bram file $@
-	@icebram -g 16 1024 > $@
+	@icebram -g 16 4096 > $@
 
 $(ROMFILE):
 	@$(MAKE) -C $(ROMSOURCE) all

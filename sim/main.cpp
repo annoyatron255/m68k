@@ -17,26 +17,23 @@ int main(int argc, char **argv) {
 	noecho();
 	nodelay(stdscr, TRUE);
 
-	bool last_DTACKn = 1;
-	tb->m_core->TX_data = 'H';
-	tb->m_core->TXE = 1;
 	while(!tb->done()) {
 		tb->tick();
 
-		if (last_DTACKn && !tb->m_core->m68k_tb__DOT__DTACKn) {
-			std::cout << (char)tb->m_core->RX_data;
+		if (tb->m_core->RX_DV) {
+			//addch(tb->m_core->RX_data);
+			putchar(tb->m_core->RX_data);
 			refresh();
 		}
-		last_DTACKn = tb->m_core->m68k_tb__DOT__DTACKn;
 
-		if (tb->m_core->TXE) {
+		if (tb->m_core->TX_active) {
+			tb->m_core->TX_start = 0;
+		} else {
 			int c = getch();
 			if (c != ERR) {
 				tb->m_core->TX_data = c;
-				tb->m_core->TXE = 0;
-			}
-		} else if (tb->m_core->TX_read) {
-			tb->m_core->TXE = 1;
+				tb->m_core->TX_start = 1;
+			}	
 		}
 	}
 	tb->done();

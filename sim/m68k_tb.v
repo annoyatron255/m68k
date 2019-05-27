@@ -4,15 +4,21 @@
 `include "../rtl/m68k.v"
 `include "../rtl/sync.v"
 `include "j68_cpu_include.v"
+`include "../rtl/UART_TX.v"
+`include "../rtl/UART_RX.v"
 
 module m68k_tb(
 	input clk,
 	input rst,
 
 	input [7:0] TX_data,
-	output [7:0] RX_data,
-	input TXE,
-	output TX_read
+	input TX_start,
+	output TX_active,
+	//output [7:0] RX_data,
+	//input TXE,
+	//output TX_read
+	output RX_DV,
+	output [7:0] RX_data
 );
 
 wire CLK68000;
@@ -39,7 +45,6 @@ wire VMAn;
 wire VPAn;
 
 wire BERRn;
-wire RESETn;
 wire HALTn;
 
 wire DATA_OEn;
@@ -50,6 +55,25 @@ wire RX;
 wire TX;
 
 wire SRAM_OEn;
+wire SRAM_CEn;
+
+UART_RX #(.CLKS_PER_BIT(104)) uart_rx_tb (
+	.i_Rst_L(1'b1),
+	.i_Clock(clk),
+	.i_RX_Serial(TX),
+	.o_RX_DV(RX_DV),
+	.o_RX_Byte(RX_data)
+);
+
+UART_TX #(.CLKS_PER_BIT(104)) uart_tx_tb (
+	.i_Rst_L(1'b1),
+	.i_Clock(clk),
+	.i_TX_DV(TX_start),
+	.i_TX_Byte(TX_data),
+	.o_TX_Active(TX_active),
+	.o_TX_Serial(RX),
+	.o_TX_Done()
+);
 
 m68k m68k_inst(
 	.clk12(clk),
@@ -77,7 +101,6 @@ m68k m68k_inst(
 	.VPAn(VPAn),
 
 	.BERRn(BERRn),
-	.RESETn(RESETn),
 	.HALTn(HALTn),
 
 	.DATA_OEn(DATA_OEn),
@@ -87,12 +110,8 @@ m68k m68k_inst(
 	.RX(RX),
 	.TX(TX),
 
-	.RX_data(TX_data),
-	.TX_data(RX_data),
-	.TXE(TXE),
-	.TX_read(TX_read),
-
-	.SRAM_OEn(SRAM_OEn)
+	.SRAM_OEn(SRAM_OEn),
+	.SRAM_CEn(SRAM_CEn)
 );
 /* verilator lint_off PINMISSING */
 wire rd_ena;

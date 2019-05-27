@@ -26,6 +26,8 @@ loop:
 	sub #1,d1
 	tst.b d1
 	bne.s loop
+	jsr cin
+	jsr cout
 	bra start
 
 cout:
