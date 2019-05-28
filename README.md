@@ -1,5 +1,5 @@
 # m68k
-A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer. It uses a Lattice FPGA to control the CPU and interface with the peripherals. It is designed to be standalone, with a PS/2 port for input and a VGA port for displa output. 
+A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer. It uses a Lattice FPGA to control the CPU and interface with the peripherals. It is designed to be standalone, with a PS/2 port for input and a VGA port for display output. 
 ## Contributors
 * [Avery Bartnik](https://github.com/Jythonscript)
   * [Assembly Programming](https://github.com/annoyatron255/m68k/blob/master/src/init.s)
