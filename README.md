@@ -18,13 +18,17 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
   * PCB Layout
   * Ordering Parts
 ## What We Did
-1. Designed and ordered PCBs on which components to build the computer could be placed
-2. Set up a RTL simulator for the Motorola 68000 processor
-3. Wrote an assembly program in the simulator that displays text using a serial port
+1. Design schematic for 68000 computer
+2. Design and layout the PCB
+3. Order the PCB and parts
+4. Wrote Verilog HDL for the FPGA
+5. Set up a RTL simulator for the whole computer design
+6. Wrote an assembly program in the simulator that displays text using the serial port
 ## What We Will Do
 1. Solder the parts to the PCB
 2. Synthesize the verilog and flash to SPI Flash to configure FPGA
 3. Interface with the board via the serial port
+4. Run programs on real hardware!
 ## Long-Term Improvements
 1. Enable on-board SRAM
 2. Configure toolchain to allow for C programming
