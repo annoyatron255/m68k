@@ -83,8 +83,7 @@ assign SRAM_CEn = 1;
 // Allocate boot rom to 8KiB
 reg [15:0] boot_rom [0:4095];
 `ifdef verilator
-//initial $readmemh("../src/build/init.hex", boot_rom); // Directly load boot_rom
-initial $readmemh("../src/test.hex", boot_rom); // Directly load boot_rom
+initial $readmemh("../src/build/init.hex", boot_rom); // Directly load boot_rom
 `else // iCE40
 initial $readmemh("./build/rand.hex", boot_rom); // Load random data for icebram
 `endif
