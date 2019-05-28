@@ -35,9 +35,15 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 7. Set up SD Card peripheral
 8. Make MMU on FPGA for Linux
 ## Gallery
-### PCB Front
-![PCB Front](img/m68k_render1.png)
-### PCB Back
-![PCB Back](img/m68k_render2.png)
-### PCB Names
-![PCB Names](img/m68k_render3.png)
+### PCB Render Front
+![PCB Render Front](img/m68k_render1.png)
+### PCB Render Back
+![PCB Render Back](img/m68k_render2.png)
+### PCB Render Names
+![PCB Render Names](img/m68k_render3.png)
+### PCB Layout Editor Overview
+![PCB Layout Editor Overview](img/m68k_pcb1.png)
+### PCB Layout Editor FPGA
+![PCB Layout Editor FPGA](img/m68k_pcb2.png)
+### PCB Layout Editor SRAM
+![PCB Layout Editor SRAM](img/m68k_pcb2.png)
