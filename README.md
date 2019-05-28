@@ -34,3 +34,10 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 6. Set up PS/2 peripheral
 7. Set up SD Card peripheral
 8. Make MMU on FPGA for Linux
+## Gallery
+### PCB Front
+![PCB Front](https://github.com/annoyatron255/m68k/img/m68k_render1.png)
+### PCB Back
+![PCB Back](https://github.com/annoyatron255/m68k/img/m68k_render2.png)
+### PCB Names
+![PCB Names](https://github.com/annoyatron255/m68k/img/m68k_render3.png)
