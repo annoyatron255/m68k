@@ -46,4 +46,4 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 ### PCB Layout Editor FPGA
 ![PCB Layout Editor FPGA](img/m68k_pcb2.png)
 ### PCB Layout Editor SRAM
-![PCB Layout Editor SRAM](img/m68k_pcb2.png)
+![PCB Layout Editor SRAM](img/m68k_pcb3.png)
