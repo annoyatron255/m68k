@@ -1,0 +1,84 @@
+set_io clk12 21
+set_io CLK68000 45
+
+set_io addr[1] 29
+set_io addr[2] 28
+set_io addr[3] 26
+set_io addr[4] 25
+set_io addr[5] 24
+set_io addr[6] 23
+set_io addr[7] 22
+set_io addr[8] 20
+set_io addr[9] 11
+set_io addr[10] 10
+set_io addr[11] 9
+set_io addr[12] 8
+set_io addr[13] 7
+set_io addr[14] 4
+set_io addr[15] 3
+set_io addr[16] 2
+set_io addr[17] 1
+set_io addr[18] 19
+set_io addr[19] 18
+set_io addr[20] 12
+set_io addr[21] 33
+set_io addr[22] 32
+set_io addr[23] 31
+
+set_io data[0] 130
+set_io data[1] 128
+set_io data[2] 124
+set_io data[3] 121
+set_io data[4] 119
+set_io data[5] 117
+set_io data[6] 115
+set_io data[7] 113
+set_io data[8] 129
+set_io data[9] 125
+set_io data[10] 122
+set_io data[11] 120
+set_io data[12] 118
+set_io data[13] 116
+set_io data[14] 114
+set_io data[15] 112
+
+set_io ASn 137
+set_io R_Wn 15
+set_io UDSn 16
+set_io LDSn 17
+set_io DTACKn 37
+
+set_io BRn 43
+set_io BGn 138
+set_io BGACKn 42
+
+set_io IPLn[0] 38
+set_io IPLn[1] 39
+set_io IPLn[2] 41
+
+set_io FC[0] 143
+set_io FC[1] 142
+set_io FC[2] 141
+
+set_io E 136
+set_io VMAn 139
+set_io VPAn 44
+
+set_io BERRn 107
+#set_io RESETn
+set_io HALTn 60
+
+set_io DATA_OEn 135
+set_io ADDR_OE 34
+set_io DIR 110
+
+set_io RX 61
+set_io TX 62
+
+#set_io [7:0] RX_data
+#set_io [7:0] TX_data
+#set_io TXE
+#set_io TX_read
+
+set_io SRAM_OEn 134
+set_io SRAM_CEn 144
