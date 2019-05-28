@@ -2,7 +2,7 @@
 A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 ## Contributors
 * Avery Bartnik
-  * Assembly Programming
+  * [Assembly Programming](https://github.com/annoyatron255/m68k/blob/master/src/init.s)
   * README
 * Erik Duxstad
   * Schematic
