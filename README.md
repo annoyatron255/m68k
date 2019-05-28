@@ -1,19 +1,19 @@
 # m68k
-A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
+A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer. It uses a Lattice FPGA to control the CPU and interface with the peripherals. It is dessigned to be standalone, with a PS/2 port for input and a VGA port for displa output. 
 ## Contributors
-* Avery Bartnik
+* [Avery Bartnik](https://github.com/Jythonscript)
   * [Assembly Programming](https://github.com/annoyatron255/m68k/blob/master/src/init.s)
   * README
-* Erik Duxstad
+* [Erik Duxstad](https://github.com/eduxstad)
   * Schematic
   * PCB Layout
   * Ordering PCB
-* Jack Sweeney
+* [Jack Sweeney](https://github.com/annoyatron255)
   * Schematic
   * Assembly Programming
   * FPGA Verilog
   * Simulation
-* Michael Wagner
+* [Michael Wagner](https://github.com/MDW01)
   * Schematic
   * PCB Layout
   * Ordering Parts
@@ -39,17 +39,15 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 7. Set up SD Card peripheral
 8. Make MMU on FPGA for Linux
 ## Gallery
-### PCB Render Front
+### PCB
 ![PCB Render Front](img/m68k_render1.png)
-### PCB Render Back
 ![PCB Render Back](img/m68k_render2.png)
-### PCB Render Names
 ![PCB Render Names](img/m68k_render3.png)
-### PCB Layout Editor Overview
+### PCB Layout 
 ![PCB Layout Editor Overview](img/m68k_pcb1.png)
-### PCB Layout Editor FPGA
+### FPGA
 ![PCB Layout Editor FPGA](img/m68k_pcb2.png)
-### PCB Layout Editor SRAM
+### SRAM
 ![PCB Layout Editor SRAM](img/m68k_pcb3.png)
-### PCB Schematic
+### Schematic
 [![PCB Schematic](img/m68k_schematic.png)](https://github.com/annoyatron255/m68k/blob/master/pcb/m68k.pdf)
