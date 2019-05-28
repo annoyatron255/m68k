@@ -36,8 +36,8 @@ A [Motorola 68000](https://en.wikipedia.org/wiki/Motorola_68000) computer
 8. Make MMU on FPGA for Linux
 ## Gallery
 ### PCB Front
-![PCB Front](https://github.com/annoyatron255/m68k/img/m68k_render1.png)
+![PCB Front](img/m68k_render1.png)
 ### PCB Back
-![PCB Back](https://github.com/annoyatron255/m68k/img/m68k_render2.png)
+![PCB Back](img/m68k_render2.png)
 ### PCB Names
-![PCB Names](https://github.com/annoyatron255/m68k/img/m68k_render3.png)
+![PCB Names](img/m68k_render3.png)
