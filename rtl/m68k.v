@@ -119,7 +119,7 @@ UART_TX #(.CLKS_PER_BIT(104)) uart_tx (
 wire [7:0] rx_data_in;
 reg [7:0] rx_data;
 wire rx_dv;
-reg rxf_n;
+reg rxf_n = 1;
 UART_RX #(.CLKS_PER_BIT(104)) uart_rx (
 	.i_Rst_L(1'b1),
 	.i_Clock(clk12),
