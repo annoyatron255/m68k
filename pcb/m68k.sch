@@ -5613,7 +5613,7 @@ U 1 1 633E5F32
 P 15050 6600
 F 0 "H4" V 15287 6603 50  0000 C CNN
 F 1 "MountingHole_Pad" V 15196 6603 50  0000 C CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 15050 6600 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 15050 6600 50  0001 C CNN
 F 3 "~" H 15050 6600 50  0001 C CNN
 	1    15050 6600
 	0    -1   -1   0   
